@@ -72,7 +72,7 @@
                     <Value>Btssio75000</Value>
                     <PlainText>true</PlainText>
                 </Password>
-                <LogonCount>2</LogonCount>
+                <LogonCount>1</LogonCount>
                 <Username>Administrateur</Username>
                 <Enabled>true</Enabled>
             </AutoLogon>
@@ -89,11 +89,13 @@
                     <CommandLine>C:\Windows\SysWOW64\cmd.exe /c powershell -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force"</CommandLine>
                     <RequiresUserInput>true</RequiresUserInput>
                 </SynchronousCommand>
-				<SynchronousCommand wcm:action="add">
+<!--
+		<SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c a:\install-vm-tools.cmd</CommandLine>
                     <Order>3</Order>
                     <Description>Install VMware Tools</Description>
                 </SynchronousCommand>
+-->
 				<SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\enable-winrm.ps1</CommandLine>
                     <Description>Enable WinRM</Description>
@@ -117,12 +119,46 @@
     <settings pass="specialize">
       <component name="Microsoft-Windows-Deployment" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <RunSynchronous>			
-			<!-- Créer un dossier C:\test pour vérifier l'exécution de PowerShell -->
-			<RunSynchronousCommand wcm:action="add">
-				<Path>powershell.exe -ExecutionPolicy Bypass -Command "New-Item -Path 'C:\test' -ItemType Directory -Force"</Path>
-				<Description>Create C:\test directory</Description>
-				<Order>1</Order>
-			</RunSynchronousCommand>
+		<RunSynchronousCommand wcm:action="add">
+                <Order>1</Order>
+                <Path>cmd.exe /c reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoAdminLogon /t REG_SZ /d 1 /f</Path>
+            </RunSynchronousCommand>
+            <RunSynchronousCommand wcm:action="add">
+                <Order>2</Order>
+                <Path>cmd.exe /c reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultUserName /t REG_SZ /d Administrateur /f</Path>
+            </RunSynchronousCommand>
+            <RunSynchronousCommand wcm:action="add">
+                <Order>3</Order>
+                <Path>cmd.exe /c reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultPassword /t REG_SZ /d Btssio75000 /f</Path>
+            </RunSynchronousCommand>
+            <RunSynchronousCommand wcm:action="add">
+                <Order>4</Order>
+                <Path>cmd.exe /c reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultDomainName /t REG_SZ /d "" /f</Path>
+            </RunSynchronousCommand>
+            <RunSynchronousCommand wcm:action="add">
+                <Order>5</Order>
+                <Path>cmd.exe /c reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DisableCAD /t REG_DWORD /d 1 /f</Path>
+            </RunSynchronousCommand>
+            <RunSynchronousCommand wcm:action="add">
+                <Order>6</Order>
+                <Path>cmd.exe /c reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v LegalNoticeCaption /f</Path>
+            </RunSynchronousCommand>
+            <RunSynchronousCommand wcm:action="add">
+                <Order>7</Order>
+                <Path>cmd.exe /c reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v LegalNoticeText /f</Path>
+            </RunSynchronousCommand>
+		<!-- Créer un dossier C:\test pour vérifier l'exécution de PowerShell -->
+		<RunSynchronousCommand wcm:action="add">
+			<Path>powershell.exe -ExecutionPolicy Bypass -Command "New-Item -Path 'C:\test' -ItemType Directory -Force"</Path>
+			<Description>Create C:\test directory</Description>
+			<Order>8</Order>
+		</RunSynchronousCommand>
+		<RunSynchronousCommand wcm:action="add">
+                    <Path>cmd.exe /c a:\install-vm-tools.cmd</Path>
+                    <Order>9</Order>
+                    <Description>Install VMware Tools</Description>
+                </RunSynchronousCommand>
+
        </RunSynchronous>
      </component>
    </settings>
