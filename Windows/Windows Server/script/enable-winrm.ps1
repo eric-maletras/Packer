@@ -1,3 +1,6 @@
+# Affiche un message indiquant le lancement du script
+Write-Host "Lancement du script"
+
 $NetworkListManager = [Activator]::CreateInstance([Type]::GetTypeFromCLSID([Guid]"{DCB00C01-570F-4A9B-8D69-199FDBA5723B}"))
 $Connections = $NetworkListManager.GetNetworkConnections()
 $Connections | ForEach-Object { $_.GetNetwork().SetCategory(1) }
@@ -15,3 +18,6 @@ netsh advfirewall firewall set rule group="Windows Remote Administration" new en
 netsh advfirewall firewall set rule name="Windows Remote Management (HTTP-In)" new enable=yes action=allow
 Set-Service winrm -startuptype "auto"
 Restart-Service winrm
+
+# Affiche un message indiquant le lancement du script
+Write-Host "Fin du script"
