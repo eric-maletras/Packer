@@ -27,7 +27,7 @@ source "vsphere-iso" "windows_server_2019" {
   communicator       = "winrm"
   winrm_username     = "Administrateur"
   winrm_password     = var.admin_password
-  winrm_host         = "192.168.62.218"
+#  winrm_host         = "192.168.62.218"
   winrm_insecure     = true
   winrm_use_ssl      = false
   winrm_port         = 5985
@@ -62,7 +62,11 @@ source "vsphere-iso" "windows_server_2019" {
   
   remove_cdrom = "true"
   
-  floppy_files         = ["./setup/autounattend.xml"]
+  floppy_files         = [
+    "./scripts/autounattend.xml",
+    "./scripts/install-vm-tools.cmd",
+    "./scripts/enable-winrm.ps1"
+  ]
 
   // Commande pour arrêter le système (ici, on effectue un SYSPREP avant l'arrêt) 
   // arrêt seul : shutdown_command = "shutdown /s /t 30 /f"
@@ -73,7 +77,7 @@ source "vsphere-iso" "windows_server_2019" {
 build {
   sources = ["source.vsphere-iso.windows_server_2019"]
  
-  provisioner "shell" {
+  provisioner "windows-shell" {
   inline = [
     "echo 'Provisioning PowerShell test'"
   ]
