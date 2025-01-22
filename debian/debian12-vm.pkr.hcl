@@ -60,6 +60,9 @@ source "vsphere-iso" "debian_12" {
   }
 
 #  boot_wait = "20s"
+#  floppy_files = ["./preseed.cfg"]
+  
+  http_directory = "./"
 
   boot_command = [
     "<esc><wait>",
@@ -70,18 +73,18 @@ source "vsphere-iso" "debian_12" {
     "keyboard-configuration/layoutcode=fr ",
     "keyboard-configuration/variantcode=oss ",
     "keyboard-configuration/modelcode=pc105 ",
-    "netcfg/get_hostname={{ .Name }} ",
-    "netcfg/get_domain=local ",
-    "fb=false ",
-    "debconf/frontend=noninteractive ",
+    "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
     "<enter>"
   ]
  
 
   # Communicateur désactivé pour le moment
   communicator = "none"
+  
+  shutdown_timeout   = "10m"
 }
 
 build {
   sources = ["source.vsphere-iso.debian_12"]
+
 }
