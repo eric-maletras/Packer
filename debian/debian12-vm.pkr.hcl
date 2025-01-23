@@ -27,6 +27,9 @@ variable "network_name" {
   default = "VM Network"
 }
 
+variable "network_name2" {
+  default = "VLAN"
+}
 source "vsphere-iso" "debian_12" {
   # Connexion à l'hôte ESXi
   host                 = var.esxi_host
@@ -58,6 +61,12 @@ source "vsphere-iso" "debian_12" {
     network     = var.network_name
     network_card = "e1000"
   }
+ 
+   network_adapters {
+    network     = var.network_name2
+    network_card = "e1000"
+  }
+
 
 #  boot_wait = "20s"
 #  floppy_files = ["./preseed.cfg"]
@@ -69,6 +78,7 @@ source "vsphere-iso" "debian_12" {
     "install ",
     "auto=true ",
     "priority=critical ",
+    "interface=ens32 ",
     "locale=fr_FR.UTF-8 ",
     "keyboard-configuration/layoutcode=fr ",
     "keyboard-configuration/variantcode=oss ",
