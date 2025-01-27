@@ -1,12 +1,10 @@
 
 variable "esxi_host" {
-  type    =  string
-#  default = "192.168.62.100"
+  default = "192.168.62.100"
 }
 
 variable "esxi_user" {
-  type    = string
-#  default = "root"
+  default = "root"
 }
 
 variable "esxi_password" {
@@ -48,7 +46,7 @@ variable "esxi_network0" {
 variable "ip_network0" {
   default = {
     interface = "Ethernet0"
-    ip      = "192.168.62.130"
+    ip      = "192.168.62.129"
     netmask = "255.255.255.0"
     gw      = "192.168.62.2"
     dns     = "192.168.62.2"
@@ -152,23 +150,23 @@ build {
     script = "scripts/postInstall.ps1"
   }
 
-  provisioner "powershell" {
-    script = "scripts/installChocolatey.ps1"
-  }
+#  provisioner "powershell" {
+#    script = "scripts/installChocolatey.ps1"
+#  }
 
   #Initier un redémarrage de la machine
 #  provisioner "windows-restart" {
 #    restart_timeout = "3m"
 #  }
   
-   provisioner "file" {
-    source      = "scripts/executeChocolatey.ps1"
-    destination = "C:/Users/Administrateur/Desktop/executeChocolatey.ps1"
-   }
+#   provisioner "file" {
+#    source      = "scripts/executeChocolatey.ps1"
+#    destination = "C:/Users/Administrateur/Desktop/executeChocolatey.ps1"
+#   }
 
-  provisioner "powershell" {
-    script = "scripts/executeChocolatey.ps1"
-  }
+#  provisioner "powershell" {
+#    script = "scripts/executeChocolatey.ps1"
+#  }
 
    provisioner "powershell" {
     script = "scripts/removeAutologon.ps1"
@@ -178,16 +176,16 @@ build {
 #    script = "scripts/installPython.ps1"
 #   }
    
-   provisioner "file" {
-    source      = "scripts/ipStatiqueEnthern0.ps1"
-    destination = var.ps1_script_path
-   }
+#   provisioner "file" {
+#    source      = "scripts/ipStatiqueEnthern0.ps1"
+#    destination = var.ps1_script_path
+#   }
 
-   provisioner "powershell" {
-    inline = [
-      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network1.interface} -IpAddress ${var.ip_network1.ip} -SubnetMask ${var.ip_network1.netmask} -Gateway ${var.ip_network1.gw} -DNSServer ${var.ip_network1.dns}"
+#   provisioner "powershell" {
+#    inline = [
+#      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network1.interface} -IpAddress ${var.ip_network1.ip} -SubnetMask ${var.ip_network1.netmask} -Gateway ${var.ip_network1.gw} -DNSServer ${var.ip_network1.dns}"
 #      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network0.interface} -IpAddress ${var.ip_network0.ip} -SubnetMask ${var.ip_network0.netmask} -Gateway ${var.ip_network0.gw} -DNSServer ${var.ip_network0.dns}"
-    ]
-   }    
+#    ]
+#   }    
 
 }
