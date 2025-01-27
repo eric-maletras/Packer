@@ -91,10 +91,23 @@ source "vsphere-iso" "debian_12" {
   # Communicateur désactivé pour le moment
   communicator = "none"
   
-  shutdown_timeout   = "10m"
+  shutdown_timeout   = "15m"
+  shutdown_command  = "echo 'Rebooting...' && reboot"
+#  skip_export       = false
+  
+  # Garder la VM enregistrée
+#  exported = false
 }
 
 build {
   sources = ["source.vsphere-iso.debian_12"]
 
+  provisioner "shell" {
+    inline = [
+      "echo 'Provisioning complete!'",
+      "sleep 2",
+      "echo 'Rebooting now...' && reboot"
+    ]
+  }
 }
+

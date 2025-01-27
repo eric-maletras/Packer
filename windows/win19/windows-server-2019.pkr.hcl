@@ -15,13 +15,13 @@ variable "datastore" {
   default = "datastore1"
 }
 
-variable "iso_url" {
-  default = "/var/ISOs/WinServ2019.iso"
+variable "iso_path" {
+  default = "[datastore1] ISOs/WinServ2019.iso"
 }
 
-variable "iso_checksum" {
-  default = "sha256:3214bb306884cbb0242117343dd4f0606c6a22b5600e5514e1447a11a29379ae"
-}
+#variable "iso_checksum" {
+#  default = "sha256:3214bb306884cbb0242117343dd4f0606c6a22b5600e5514e1447a11a29379ae"
+#}
 
 variable "VM_name" {
   default = "M2L-WSRV02"
@@ -80,9 +80,7 @@ source "vsphere-iso" "windows_server_2019" {
   insecure_connection  = true
 
   datastore            = var.datastore
-
-  iso_url            = var.iso_url
-  iso_checksum       = var.iso_checksum
+  
 
   communicator       = "winrm"
   winrm_username     = var.windows_user
@@ -100,7 +98,10 @@ source "vsphere-iso" "windows_server_2019" {
   vm_name            = var.VM_name
   guest_os_type      = "windows8Server64Guest"
   
-  iso_paths           = [var.vm_tool_path]
+  iso_paths           = [
+    var.iso_path,
+    var.vm_tool_path
+  ]
 
   //Config de la machine
   CPUs			= 2
@@ -127,9 +128,6 @@ source "vsphere-iso" "windows_server_2019" {
     network      = var.esxi_network1
     network_card = "e1000"
   }
-
-  
-  remove_cdrom = "true"
   
   floppy_files         = [
     "./scripts/autounattend.xml",
@@ -137,8 +135,12 @@ source "vsphere-iso" "windows_server_2019" {
     "./scripts/enable-winrm.ps1"
   ]
 
+  # Création du snapshot
+  create_snapshot       = true
+  snapshot_name         = "init"
 
   shutdown_timeout = "20m"
+  remove_cdrom = true
 }
 
 build {
@@ -148,23 +150,23 @@ build {
     script = "scripts/postInstall.ps1"
   }
 
-  provisioner "powershell" {
-    script = "scripts/installChocolatey.ps1"
-  }
+#  provisioner "powershell" {
+#    script = "scripts/installChocolatey.ps1"
+#  }
 
   #Initier un redémarrage de la machine
-  provisioner "windows-restart" {
-    restart_timeout = "3m"
-  }
+#  provisioner "windows-restart" {
+#    restart_timeout = "3m"
+#  }
   
-   provisioner "file" {
-    source      = "scripts/executeChocolatey.ps1"
-    destination = "C:/Users/Administrateur/Desktop/executeChocolatey.ps1"
-   }
+#   provisioner "file" {
+#    source      = "scripts/executeChocolatey.ps1"
+#    destination = "C:/Users/Administrateur/Desktop/executeChocolatey.ps1"
+#   }
 
-  provisioner "powershell" {
-    script = "scripts/executeChocolatey.ps1"
-  }
+#  provisioner "powershell" {
+#    script = "scripts/executeChocolatey.ps1"
+#  }
 
    provisioner "powershell" {
     script = "scripts/removeAutologon.ps1"
@@ -174,25 +176,16 @@ build {
 #    script = "scripts/installPython.ps1"
 #   }
    
-   provisioner "file" {
-    source      = "scripts/ipStatiqueEnthern0.ps1"
-    destination = var.ps1_script_path
-   }
-
-   provisioner "powershell" {
-    inline = [
-      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network1.interface} -IpAddress ${var.ip_network1.ip} -SubnetMask ${var.ip_network1.netmask} -Gateway ${var.ip_network1.gw} -DNSServer ${var.ip_network1.dns}"
-#      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network0.interface} -IpAddress ${var.ip_network0.ip} -SubnetMask ${var.ip_network0.netmask} -Gateway ${var.ip_network0.gw} -DNSServer ${var.ip_network0.dns}"
-    ]
-   }    
-   
-#   provisioner "shell" {
-#     inline = ["shutdown /s /t 0"]
+#   provisioner "file" {
+#    source      = "scripts/ipStatiqueEnthern0.ps1"
+#    destination = var.ps1_script_path
 #   }
 
-#  provisioner "shell" {
+#   provisioner "powershell" {
 #    inline = [
-#      "govc snapshot.create -vm=${var.VM_name} -u https://${var.esxi_user}:={var.esxi_password}@${var.esxi_host} -k snapshot-name"
+#      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network1.interface} -IpAddress ${var.ip_network1.ip} -SubnetMask ${var.ip_network1.netmask} -Gateway ${var.ip_network1.gw} -DNSServer ${var.ip_network1.dns}"
+#      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network0.interface} -IpAddress ${var.ip_network0.ip} -SubnetMask ${var.ip_network0.netmask} -Gateway ${var.ip_network0.gw} -DNSServer ${var.ip_network0.dns}"
 #    ]
-#  }
+#   }    
+
 }

@@ -95,13 +95,13 @@ if ($diskNumber -ne $null) {
 
     # Étape 2 : Enlever l'attribut 'lecture seule' du disque
     Write-Host "Suppression de l'attribut 'lecture seule'..."
-    Set-Disk -Number $diskNumber -IsReadOnly $false -Confirm:$false
+    Set-Disk -Number $diskNumber -IsReadOnly $false 
     Write-Host "L'attribut 'lecture seule' a été supprimé."
 
     # Étape 3 : Configurer les permissions sur le volume
-    Write-Host "Configuration des permissions pour tout le monde (lecture et exécution)..."
-    Set-Volume -DriveLetter $driveLetter -FileSystemAccessRule "Everyone" -AccessRights ReadAndExecute -AccessControlType Allow
-    Write-Host "Les permissions ont été configurées avec succès sur le volume $driveLetter."
+#    Write-Host "Configuration des permissions pour tout le monde (lecture et exécution)..."
+#    Set-Volume -DriveLetter $driveLetter -FileSystemAccessRule "Everyone" -AccessRights ReadAndExecute -AccessControlType Allow
+#    Write-Host "Les permissions ont été configurées avec succès sur le volume $driveLetter."
 
 } else {
     Write-Host "Erreur : Aucun disque trouvé avec la lettre $driveLetter."
