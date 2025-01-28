@@ -1,27 +1,27 @@
 
 esxi_host = "192.168.62.100"
 
-esxi_user = "root"
+#esxi_user = "root"
 
-esxi_password = "Btssio75000!"
+#esxi_password = "Btssio75000!"
 
-datastore = "datastore1"
+#datastore = "datastore1"
 
-iso_path = "[datastore1] ISOs/WinServ2019.iso"
+#iso_path = "[datastore1] ISOs/WinServ2019.iso"
 
 VM_name = "M2L-WSRV02"
 
-windows_user = "administrateur"
+#windows_user = "administrateur"
 
-windows_password = "Btssio75000"
+#windows_password = "Btssio75000"
 
-vm_tool_path = "[datastore1] vmimages/tools-isoimages/windows.iso"
+#vm_tool_path = "[datastore1] vmimages/tools-isoimages/windows.iso"
 
 esxi_network0 = "VM Network"
 
 ip_network0 = {
     interface = "Ethernet0"
-    ip      = "192.168.62.129"
+    ip      = "192.168.62.130"
     netmask = "255.255.255.0"
     gw      = "192.168.62.2"
     dns     = "192.168.62.2"
@@ -38,4 +38,4 @@ ip_network1 = {
   }
 
 
-ps1_script_path = "C:/Windows/Temp/set_static_ip.ps1"
+#ps1_script_path = "C:/Windows/Temp/set_static_ip.ps1"

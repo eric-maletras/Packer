@@ -6,18 +6,21 @@ variable "esxi_host" {
 
 variable "esxi_user" {
   type    = string
-#  default = "root"
+  default = "root"
 }
 
 variable "esxi_password" {
+  type    = string 
   default = "Btssio75000!"
 }
 
 variable "datastore" {
+  type    = string
   default = "datastore1"
 }
 
 variable "iso_path" {
+  type    = string
   default = "[datastore1] ISOs/WinServ2019.iso"
 }
 
@@ -26,51 +29,57 @@ variable "iso_path" {
 #}
 
 variable "VM_name" {
-  default = "M2L-WSRV02"
+  type    = string
 }
 
 variable "windows_user" {
+  type    = string
   default = "administrateur"
 }
 
 variable "windows_password" {
+  type    = string
   default = "Btssio75000"
 }
 
 variable "vm_tool_path" {
+  type    = string
   default = "[datastore1] vmimages/tools-isoimages/windows.iso"
 }
 
 variable "esxi_network0" {
-  default = "VM Network"
+  type    = string
+#  default = "VM Network"
 }
 
 variable "ip_network0" {
-  default = {
-    interface = "Ethernet0"
-    ip      = "192.168.62.130"
-    netmask = "255.255.255.0"
-    gw      = "192.168.62.2"
-    dns     = "192.168.62.2"
-  }
+  type = object( {
+    interface = string
+    ip      = string
+    netmask = string
+    gw      = string
+    dns     = string
+  })
 }
-
-variable "ip_network1" {
-  default = {
-    interface = "Ethernet1"
-    ip      = "172.16.2.58"
-    netmask = "255.255.255.192"
-    gw      = "172.16.2.62"
-    dns     = "172.16.2.61"
-  }
-}
-
 
 variable "esxi_network1" {
-  default = "VLAN"
+  type = string
 }
 
+
+variable "ip_network1" {
+  type = object( {
+    interface = string
+    ip      = string
+    netmask = string
+    gw      = string
+    dns     = string
+  })
+}
+
+
 variable "ps1_script_path" {
+  type = string
   default = "C:/Windows/Temp/set_static_ip.ps1"
 }
 
@@ -157,9 +166,9 @@ build {
   }
 
   #Initier un redémarrage de la machine
-#  provisioner "windows-restart" {
-#    restart_timeout = "3m"
-#  }
+  provisioner "windows-restart" {
+    restart_timeout = "3m"
+  }
   
    provisioner "file" {
     source      = "scripts/executeChocolatey.ps1"
