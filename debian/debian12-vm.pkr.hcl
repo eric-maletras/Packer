@@ -20,29 +20,33 @@ variable "iso_path" {
 }
 
 variable "vm_name" {
-  default = "M2L-LSRV05"
+ type = string
+}
+
+variable "vm_hostname" {
+  type = string
+}
+
+variable "vm_domain" {
+  type = string
+}
+
+
+variable "guest_os_type" {
+  type = string
+  default = "debian10_64Guest"
 }
 
 variable "network_name" {
-  default = "VM Network"
+  type = string
+#  default = "VM Network"
 }
 
 variable "network_name2" {
-  default = "VLAN"
+  type = string
+#  default = "VLAN"
 }
 
-
-variable "root_password" {
-  default = "Btssio75000"
-}
-
-variable "user_name" {
-  default = "admin1"
-}
-
-variable "user_password" {
-  default = "Btssio75000"
-}
 
 source "vsphere-iso" "debian_12" {
   # Connexion à l'hôte ESXi
@@ -59,7 +63,7 @@ source "vsphere-iso" "debian_12" {
 
   # Configuration matérielle de la VM
   vm_name              = var.vm_name
-  guest_os_type        = "debian10_64Guest" # Type d'OS pour ESXi
+  guest_os_type        = var.guest_os_type
   CPUs                 = 2
   RAM                  = 2048
   disk_controller_type = ["pvscsi"] # Paravirtual SCSI pour de meilleures performances
@@ -81,10 +85,6 @@ source "vsphere-iso" "debian_12" {
     network_card = "e1000"
   }
 
-
-  #  boot_wait = "20s"
-  #  floppy_files = ["./preseed.cfg"]
-
   http_directory = "./"
 
   boot_command = [
@@ -97,10 +97,8 @@ source "vsphere-iso" "debian_12" {
     "keyboard-configuration/layoutcode=fr ",
     "keyboard-configuration/variantcode=oss ",
     "keyboard-configuration/modelcode=pc105 ",
-    "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
-    "root_password=${var.root_password}",
-    " user_name=${var.user_name}",
-    " user_password=${var.user_password}",
+    "netcfg/get_hostname=${var.vm_hostname} netcfg/get_domain=${var.vm_domain} ",
+    "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
     "<enter>"
   ]
 
@@ -108,26 +106,17 @@ source "vsphere-iso" "debian_12" {
   # Communicateur désactivé pour le moment
   communicator = "none"
 
-  shutdown_timeout = "15m"
-  shutdown_command = "echo 'Rebooting...' && reboot"
-  #  skip_export       = false
+  # Configuration du snapshot après la création
+  create_snapshot  = true
+  snapshot_name    = "InitSnapshot"
 
-  # Garder la VM enregistrée
-  #  exported = false
+  shutdown_timeout = "30m"
+
 }
 
 
 build {
   sources = ["source.vsphere-iso.debian_12"]
 
-  #  http_directory = "http"
-
-  provisioner "shell" {
-    inline = [
-      "echo 'Provisioning complete!'",
-      "sleep 2",
-      "echo 'Rebooting now...' && reboot"
-    ]
-  }
 }
 
