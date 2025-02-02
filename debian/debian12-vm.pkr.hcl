@@ -19,6 +19,17 @@ variable "iso_path" {
   default = "[datastore1] ISOs/debian-12.2.0-amd64-DVD-1.iso"
 }
 
+variable ssh_username {
+  type = string
+  default = "admin1"
+}
+
+variable ssh_password {
+  type = string
+  default = "Btssio75000"
+}
+
+
 variable "vm_name" {
  type = string
 }
@@ -103,14 +114,21 @@ source "vsphere-iso" "debian_12" {
   ]
 
 
-  # Communicateur désactivé pour le moment
-  communicator = "none"
+  # Configuration SSH pour que Packer puisse se connecter après l'installation
+  communicator = "ssh"
+
+  ssh_username = var.ssh_username
+  ssh_password = var.ssh_password
+  ssh_timeout  = "15m"
+
+  ip_wait_timeout = "25m"
+ 
 
   # Configuration du snapshot après la création
   create_snapshot  = true
   snapshot_name    = "InitSnapshot"
 
-  shutdown_timeout = "30m"
+  shutdown_timeout = "15m"
 
 }
 
@@ -118,5 +136,32 @@ source "vsphere-iso" "debian_12" {
 build {
   sources = ["source.vsphere-iso.debian_12"]
 
+  provisioner "shell" {
+    inline = [
+      "echo 'Configuration de ens32 en IP statique...'",
+ 
+     # Supprime toute config DHCP existante
+      "sudo sed -i '/^iface ens32 inet/d' /etc/network/interfaces",
+      "sudo sed -i '/^allow-hotplug ens32/d' /etc/network/interfaces",
+
+      # Ajoute la nouvelle configuration en IP statique
+      "sudo tee -a /etc/network/interfaces <<EOF",
+      "auto ens32",
+      "iface ens32 inet static",
+      "    address 192.168.62.110",
+      "    netmask 255.255.255.0",
+      "    gateway 192.168.62.2",
+      "    dns-nameservers 8.8.8.8",
+      "EOF",
+
+      # Appliquer les changements sans redémarrer la VM
+      "sudo systemctl restart networking",
+    
+      # Vérification après modification
+      "ip a show ens32"
+    ]
+  }
+
+ 
 }
 
