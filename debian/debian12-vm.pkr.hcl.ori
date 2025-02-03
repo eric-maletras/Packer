@@ -91,10 +91,10 @@ source "vsphere-iso" "debian_12" {
     network_card = "e1000"
   }
 
-  network_adapters {
-    network      = var.network_name2
-    network_card = "e1000"
-  }
+#  network_adapters {
+#    network      = var.network_name2
+#    network_card = "e1000"
+#  }
 
   http_directory = "./"
 
@@ -109,6 +109,12 @@ source "vsphere-iso" "debian_12" {
     "keyboard-configuration/variantcode=oss ",
     "keyboard-configuration/modelcode=pc105 ",
     "netcfg/get_hostname=${var.vm_hostname} netcfg/get_domain=${var.vm_domain} ",
+    "auto netcfg/disable_dhcp=true ",
+    "netcfg/choose_interface=ens32 ",
+    "netcfg/get_ipaddress=192.168.62.110 ",
+    "netcfg/get_netmask=255.255.255.0 ",
+    "netcfg/get_gateway=192.168.62.2 ",
+    "netcfg/get_nameservers=8.8.8.8 ",
     "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
     "<enter>"
   ]
@@ -116,13 +122,14 @@ source "vsphere-iso" "debian_12" {
 
   # Configuration SSH pour que Packer puisse se connecter après l'installation
   communicator = "ssh"
-
+  
+  ssh_host = "192.168.62.110"
   ssh_username = var.ssh_username
   ssh_password = var.ssh_password
   ssh_timeout  = "15m"
 
-  ip_wait_timeout = "15m"
- 
+  ip_wait_timeout = "10m"
+  skip_ip_lookup = true
 
   # Configuration du snapshot après la création
   create_snapshot  = true
@@ -136,32 +143,12 @@ source "vsphere-iso" "debian_12" {
 build {
   sources = ["source.vsphere-iso.debian_12"]
 
-  provisioner "shell" {
+
+  provisioner "shell-local" {
     inline = [
-      "echo 'Configuration de ens32 en IP statique...'",
- 
-     # Supprime toute config DHCP existante
-      "sudo sed -i '/^iface ens32 inet/d' /etc/network/interfaces",
-      "sudo sed -i '/^allow-hotplug ens32/d' /etc/network/interfaces",
-
-      # Ajoute la nouvelle configuration en IP statique
-      "sudo tee -a /etc/network/interfaces <<EOF",
-      "auto ens32",
-      "iface ens32 inet static",
-      "    address 192.168.62.110",
-      "    netmask 255.255.255.0",
-      "    gateway 192.168.62.2",
-      "    dns-nameservers 8.8.8.8",
-      "EOF",
-
-      # Appliquer les changements sans redémarrer la VM
-      "sudo systemctl restart networking",
-    
-      # Vérification après modification
-      "ip a show ens32"
+      "govc vm.network.add -u 'https://root:Btssio75000!@192.168.62.100' -k -vm=${var.vm_name} -net='DMZ' -net.adapter=vmxnet3"
     ]
   }
-
  
 }
 
