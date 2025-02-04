@@ -53,6 +53,25 @@ variable "network_name" {
 #  default = "VM Network"
 }
 
+variable "networkcard1" {
+  type = object({
+    name    = string
+    ip      = string
+    netmask = string
+    gateway = string
+    dns     = string
+  })
+  default = {
+    name    = "ens32"
+    ip      = "192.168.62.110"
+    netmask = "255.255.255.0"
+    gateway = "192.168.62.2"
+    dns     = "8.8.8.8"
+  }
+}
+
+
+
 variable "network_name2" {
   type = string
 #  default = "VLAN"
@@ -91,10 +110,10 @@ source "vsphere-iso" "debian_12" {
     network_card = "e1000"
   }
 
-  network_adapters {
-    network      = var.network_name2
-    network_card = "e1000"
-  }
+#  network_adapters {
+#    network      = var.network_name2
+#    network_card = "e1000"
+#  }
 
   http_directory = "./"
 
@@ -109,59 +128,36 @@ source "vsphere-iso" "debian_12" {
     "keyboard-configuration/variantcode=oss ",
     "keyboard-configuration/modelcode=pc105 ",
     "netcfg/get_hostname=${var.vm_hostname} netcfg/get_domain=${var.vm_domain} ",
+    "auto netcfg/disable_dhcp=true ",
+    "netcfg/choose_interface=${var.networkcard1.name }} ",
+    "netcfg/get_ipaddress=${var.networkcard1.ip} ",
+    "netcfg/get_netmask=${var.networkcard1.netmask} ",
+    "netcfg/get_gateway=${var.networkcard1.gateway} ",
+    "netcfg/get_nameservers=${var.networkcard1.dns} ",
     "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
     "<enter>"
   ]
 
-
   # Configuration SSH pour que Packer puisse se connecter après l'installation
-  communicator = "ssh"
-
+  communicator = "none"
+  
+  ssh_host = "192.168.62.110"
   ssh_username = var.ssh_username
   ssh_password = var.ssh_password
-  ssh_timeout  = "15m"
+#  ssh_timeout  = "20m"
 
-  ip_wait_timeout = "15m"
- 
+#  ip_wait_timeout = "20m"
 
   # Configuration du snapshot après la création
   create_snapshot  = true
   snapshot_name    = "InitSnapshot"
 
-  shutdown_timeout = "15m"
+  shutdown_timeout = "30m"
 
 }
 
 
 build {
-  sources = ["source.vsphere-iso.debian_12"]
-
-  provisioner "shell" {
-    inline = [
-      "echo 'Configuration de ens32 en IP statique...'",
- 
-     # Supprime toute config DHCP existante
-      "sudo sed -i '/^iface ens32 inet/d' /etc/network/interfaces",
-      "sudo sed -i '/^allow-hotplug ens32/d' /etc/network/interfaces",
-
-      # Ajoute la nouvelle configuration en IP statique
-      "sudo tee -a /etc/network/interfaces <<EOF",
-      "auto ens32",
-      "iface ens32 inet static",
-      "    address 192.168.62.110",
-      "    netmask 255.255.255.0",
-      "    gateway 192.168.62.2",
-      "    dns-nameservers 8.8.8.8",
-      "EOF",
-
-      # Appliquer les changements sans redémarrer la VM
-      "sudo systemctl restart networking",
-    
-      # Vérification après modification
-      "ip a show ens32"
-    ]
-  }
-
- 
+  sources = ["source.vsphere-iso.debian_12"] 
 }
 
