@@ -110,10 +110,10 @@ source "vsphere-iso" "debian_12" {
     network_card = "e1000"
   }
 
-#  network_adapters {
-#    network      = var.network_name2
-#    network_card = "e1000"
-#  }
+  network_adapters {
+    network      = var.network_name2
+    network_card = "e1000"
+  }
 
   http_directory = "./"
 
@@ -128,36 +128,66 @@ source "vsphere-iso" "debian_12" {
     "keyboard-configuration/variantcode=oss ",
     "keyboard-configuration/modelcode=pc105 ",
     "netcfg/get_hostname=${var.vm_hostname} netcfg/get_domain=${var.vm_domain} ",
-    "auto netcfg/disable_dhcp=true ",
-    "netcfg/choose_interface=${var.networkcard1.name }} ",
-    "netcfg/get_ipaddress=${var.networkcard1.ip} ",
-    "netcfg/get_netmask=${var.networkcard1.netmask} ",
-    "netcfg/get_gateway=${var.networkcard1.gateway} ",
-    "netcfg/get_nameservers=${var.networkcard1.dns} ",
+#    "auto netcfg/disable_dhcp=true ",
+#    "netcfg/choose_interface=${var.networkcard1.name }} ",
+#    "netcfg/get_ipaddress=${var.networkcard1.ip} ",
+#    "netcfg/get_netmask=${var.networkcard1.netmask} ",
+#    "netcfg/get_gateway=${var.networkcard1.gateway} ",
+#    "netcfg/get_nameservers=${var.networkcard1.dns} ",
     "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
     "<enter>"
   ]
 
   # Configuration SSH pour que Packer puisse se connecter après l'installation
-  communicator = "none"
+  communicator = "ssh"
   
-  ssh_host = "192.168.62.110"
+#  ssh_host = "192.168.62.110"
   ssh_username = var.ssh_username
   ssh_password = var.ssh_password
-#  ssh_timeout  = "20m"
+  ssh_timeout  = "20m"
 
-#  ip_wait_timeout = "20m"
+  ip_wait_timeout = "30m"
 
   # Configuration du snapshot après la création
   create_snapshot  = true
   snapshot_name    = "InitSnapshot"
 
-  shutdown_timeout = "30m"
+  shutdown_timeout = "60m"
 
 }
 
 
 build {
   sources = ["source.vsphere-iso.debian_12"] 
+  
+  provisioner "shell" {
+  inline = [
+    "echo 'Début du provisionnement...'",
+
+    "# Sauvegarder le fichier de configuration existant",
+    "echo 'Sauvegarde du fichier /etc/network/interfaces en cours...'",
+    "sudo cp /etc/network/interfaces /etc/network/interfaces.bak",
+    "echo 'Sauvegarde effectuée : /etc/network/interfaces.bak'",
+
+    "# Suppression des lignes existantes pour l'interface (hotplug et configuration DHCP)",
+    "echo 'Suppression des lignes de configuration existantes pour ${var.networkcard1.name}...'",
+    "sudo sed -i '/^hotplug ${var.networkcard1.name}/d' /etc/network/interfaces",
+    "sudo sed -i '/^iface ${var.networkcard1.name} inet dhcp/d' /etc/network/interfaces",
+    "echo 'Suppression terminée'",
+
+    "# Ajout de la configuration statique pour l'interface",
+    "echo 'Ajout de la configuration statique pour ${var.networkcard1.name}...'",
+    "sudo sh -c 'echo \"\" >> /etc/network/interfaces'",
+    "sudo sh -c 'echo \"auto ${var.networkcard1.name}\" >> /etc/network/interfaces'",
+    "sudo sh -c 'echo \"iface ${var.networkcard1.name} inet static\" >> /etc/network/interfaces'",
+    "sudo sh -c 'echo \"    address ${var.networkcard1.ip}\" >> /etc/network/interfaces'",
+    "sudo sh -c 'echo \"    netmask ${var.networkcard1.netmask}\" >> /etc/network/interfaces'",
+    "sudo sh -c 'echo \"    gateway ${var.networkcard1.gateway}\" >> /etc/network/interfaces'",
+    "sudo sh -c 'echo \"    dns-nameservers ${var.networkcard1.dns}\" >> /etc/network/interfaces'",
+    "echo 'Configuration statique ajoutée pour ${var.networkcard1.name}'",
+    "echo 'Provisionnement terminé.'"
+  ]
+}
+
 }
 
