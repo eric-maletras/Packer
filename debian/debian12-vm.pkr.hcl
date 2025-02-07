@@ -29,6 +29,10 @@ variable ssh_password {
   default = "Btssio75000"
 }
 
+variable ip_wait_timeout {
+  type = string
+  default = "30m"
+}
 
 variable "vm_name" {
  type = string
@@ -128,12 +132,6 @@ source "vsphere-iso" "debian_12" {
     "keyboard-configuration/variantcode=oss ",
     "keyboard-configuration/modelcode=pc105 ",
     "netcfg/get_hostname=${var.vm_hostname} netcfg/get_domain=${var.vm_domain} ",
-#    "auto netcfg/disable_dhcp=true ",
-#    "netcfg/choose_interface=${var.networkcard1.name }} ",
-#    "netcfg/get_ipaddress=${var.networkcard1.ip} ",
-#    "netcfg/get_netmask=${var.networkcard1.netmask} ",
-#    "netcfg/get_gateway=${var.networkcard1.gateway} ",
-#    "netcfg/get_nameservers=${var.networkcard1.dns} ",
     "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
     "<enter>"
   ]
@@ -141,12 +139,11 @@ source "vsphere-iso" "debian_12" {
   # Configuration SSH pour que Packer puisse se connecter après l'installation
   communicator = "ssh"
   
-#  ssh_host = "192.168.62.110"
   ssh_username = var.ssh_username
   ssh_password = var.ssh_password
   ssh_timeout  = "20m"
 
-  ip_wait_timeout = "30m"
+  ip_wait_timeout = var.ip_wait_timeout
 
   # Configuration du snapshot après la création
   create_snapshot  = true
