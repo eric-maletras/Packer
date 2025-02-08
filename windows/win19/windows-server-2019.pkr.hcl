@@ -1,7 +1,6 @@
 
 variable "esxi_host" {
   type    =  string
-#  default = "192.168.62.100"
 }
 
 variable "esxi_user" {
@@ -49,7 +48,6 @@ variable "vm_tool_path" {
 
 variable "esxi_network0" {
   type    = string
-#  default = "VM Network"
 }
 
 variable "ip_network0" {
@@ -65,7 +63,6 @@ variable "ip_network0" {
 variable "esxi_network1" {
   type = string
 }
-
 
 variable "ip_network1" {
   type = object( {
@@ -194,8 +191,8 @@ build {
 
    provisioner "powershell" {
     inline = [
-      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network1.interface} -IpAddress ${var.ip_network1.ip} -SubnetMask ${var.ip_network1.netmask} -Gateway ${var.ip_network1.gw} -DNSServer ${var.ip_network1.dns}"
-#      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network0.interface} -IpAddress ${var.ip_network0.ip} -SubnetMask ${var.ip_network0.netmask} -Gateway ${var.ip_network0.gw} -DNSServer ${var.ip_network0.dns}"
+      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network1.interface} -IpAddress ${var.ip_network1.ip} -SubnetMask ${var.ip_network1.netmask} -Gateway ${var.ip_network1.gw} -DNSServer ${var.ip_network1.dns}",
+      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network0.interface} -IpAddress ${var.ip_network0.ip} -SubnetMask ${var.ip_network0.netmask} -Gateway ${var.ip_network0.gw} -DNSServer ${var.ip_network0.dns}"
     ]
    }    
 
