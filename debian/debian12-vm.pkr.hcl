@@ -65,13 +65,6 @@ variable "networkcard1" {
     gateway = string
     dns     = string
   })
-  default = {
-    name    = "ens32"
-    ip      = "192.168.62.110"
-    netmask = "255.255.255.0"
-    gateway = "192.168.62.2"
-    dns     = "8.8.8.8"
-  }
 }
 
 
@@ -175,16 +168,18 @@ build {
     "# Ajout de la configuration statique pour l'interface",
     "echo 'Ajout de la configuration statique pour ${var.networkcard1.name}...'",
     "sudo sh -c 'echo \"\" >> /etc/network/interfaces'",
+    "sudo sh -c 'echo \"# BEGIN ANSIBLE MANAGED BLOCK: Configuration de ${var.networkcard1.name}\" >> /etc/network/interfaces'",
     "sudo sh -c 'echo \"auto ${var.networkcard1.name}\" >> /etc/network/interfaces'",
     "sudo sh -c 'echo \"iface ${var.networkcard1.name} inet static\" >> /etc/network/interfaces'",
     "sudo sh -c 'echo \"    address ${var.networkcard1.ip}\" >> /etc/network/interfaces'",
     "sudo sh -c 'echo \"    netmask ${var.networkcard1.netmask}\" >> /etc/network/interfaces'",
     "sudo sh -c 'echo \"    gateway ${var.networkcard1.gateway}\" >> /etc/network/interfaces'",
     "sudo sh -c 'echo \"    dns-nameservers ${var.networkcard1.dns}\" >> /etc/network/interfaces'",
+    "sudo sh -c 'echo \"# END ANSIBLE MANAGED BLOCK: Configuration de ${var.networkcard1.name}\" >> /etc/network/interfaces'",
     "echo 'Configuration statique ajoutée pour ${var.networkcard1.name}'",
     "echo 'Provisionnement terminé.'"
-  ]
-}
+   ]
+ }
 
 }
 

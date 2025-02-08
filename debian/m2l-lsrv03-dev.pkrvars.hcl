@@ -11,12 +11,12 @@ network_name = "VM Network"
 network_name2 = "VLAN"
 
 
-ip_wait_timeout = "40m"
+ip_wait_timeout = "20m"
 
 
 networkcard1 = {
   name    = "ens32"
-  ip      = "192.168.62.111"
+  ip      = "192.168.62.102"
   netmask = "255.255.255.0"
   gateway = "192.168.62.2"
   dns     = "8.8.8.8"
