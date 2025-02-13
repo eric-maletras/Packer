@@ -164,7 +164,7 @@ build {
 
   #Initier un redémarrage de la machine
   provisioner "windows-restart" {
-    restart_timeout = "3m"
+    restart_timeout = "5m"
   }
   
    provisioner "file" {
