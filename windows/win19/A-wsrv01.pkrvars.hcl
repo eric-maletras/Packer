@@ -17,7 +17,7 @@ windows_password = "Btssio75000"
 
 vm_tool_path = "[datastore1] vmimages/tools-isoimages/windows.iso"
 
-esxi_network0 = "VM Network"
+esxi_network0 = "VM IMC"
 
 ip_network0 = {
     interface = "Ethernet0"
@@ -27,7 +27,7 @@ ip_network0 = {
     dns     = "8.8.8.8"
   }
 
-esxi_network1 = "VLAN"
+esxi_network1 = "VM Network"
 
 ip_network1 = {
     interface = "Ethernet1"
