@@ -9,7 +9,7 @@ datastore = "datastore1"
 
 iso_path = "[datastore1] ISOs/WinServ2019.iso"
 
-VM_name = "M2L-WSRV01"
+VM_name = "M2L-WSRV02"
 
 windows_user = "administrateur"
 
