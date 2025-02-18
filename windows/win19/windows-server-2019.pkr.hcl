@@ -34,7 +34,7 @@ variable "VM_name" {
 
 variable "VM_domain" {
   type = string
-  default = labo.lan
+  default = "labo.lan"
 }
 
 variable "windows_user" {
@@ -160,9 +160,16 @@ source "vsphere-iso" "windows_server_2019" {
 build {
   sources = ["source.vsphere-iso.windows_server_2019"]
 
+
+  provisioner "file" {
+    source      = "scripts/postInstall.ps1"
+    destination = "C:\\Windows\\Temp\\postInstall.ps1"
+  }
+
   provisioner "powershell" {
     inline = [
-      "powershell.exe -File scripts/postInstall.ps1 -Hostname ${var.VM_name} -DNSDomain ${var.VM_domain}"
+      "powershell.exe -File C:\\Windows\\Temp\\postInstall.ps1 -Hostname ${var.VM_name} -DNSDomain ${var.VM_domain}",
+      "Remove-Item -Force C:\\Windows\\Temp\\postInstall.ps1"
     ]
   }
 
@@ -188,9 +195,6 @@ build {
     script = "scripts/removeAutologon.ps1"
    }
 
-#   provisioner "powershell" {
-#    script = "scripts/installPython.ps1"
-#   }
    
    provisioner "file" {
     source      = "scripts/ipStatiqueEnthern0.ps1"
