@@ -1,7 +1,13 @@
 # Script PowerShell pour configurer la carte réseau avec une IP statique
 
-$DNSDomain = "labo.lan"        # Domaine DNS (FQDN)
-$Hostname = "M2L-WSRV01"       # Nom de la VM
+#$DNSDomain = "labo.lan"        # Domaine DNS (FQDN)
+#$Hostname = "M2L-WSRV01"       # Nom de la VM
+
+param (
+    [string]$Hostname,
+    [string]$DNSDomain
+)
+
 
 # Désactiver l'expiration du mot de passe
 Write-Host "Desactivation du mot de passe"

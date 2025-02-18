@@ -31,6 +31,12 @@ variable "VM_name" {
   type    = string
 }
 
+
+variable "VM_domain" {
+  type = string
+  default = labo.lan
+}
+
 variable "windows_user" {
   type    = string
   default = "administrateur"
@@ -155,7 +161,9 @@ build {
   sources = ["source.vsphere-iso.windows_server_2019"]
 
   provisioner "powershell" {
-    script = "scripts/postInstall.ps1"
+    inline = [
+      "powershell.exe -File scripts/postInstall.ps1 -Hostname ${var.VM_name} -DNSDomain ${var.VM_domain}"
+    ]
   }
 
   provisioner "powershell" {
