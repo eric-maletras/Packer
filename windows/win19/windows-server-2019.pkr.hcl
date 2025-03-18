@@ -86,6 +86,11 @@ variable "ps1_script_path" {
   default = "C:/Windows/Temp/set_static_ip.ps1"
 }
 
+variable "ip_wait_timeout" {
+  type = string
+  default = "30mn"
+
+
 source "vsphere-iso" "windows_server_2019" {
   host		       = var.esxi_host
   vcenter_server       = var.esxi_host
@@ -104,6 +109,10 @@ source "vsphere-iso" "windows_server_2019" {
   winrm_use_ssl      = false
   winrm_port         = 5985
   winrm_timeout      = "30m"
+
+#  pause_before_connecting = "90m"
+#  boot_wait          = "90m"
+  ip_wait_timeout = var.ip_wait_timeout
 
   ssh_username       = var.windows_user
   ssh_password       = var.windows_password
@@ -144,25 +153,24 @@ source "vsphere-iso" "windows_server_2019" {
   }
   
   floppy_files         = [
-    "./scripts/autounattend.xml",
-    "./scripts/install-vm-tools.cmd",
-    "./scripts/enable-winrm.ps1"
+    "/var/Packer/windows/win19/scripts/autounattend.xml",
+    "/var/Packer/windows/win19/scripts/install-vm-tools.cmd",
+    "/var/Packer/windows/win19/scripts/enable-winrm.ps1"
   ]
 
   # Création du snapshot
   create_snapshot       = true
   snapshot_name         = "init"
 
-  shutdown_timeout = "20m"
+  shutdown_timeout = "30m"
   remove_cdrom = true
 }
 
 build {
-  sources = ["source.vsphere-iso.windows_server_2019"]
-
+  sources = ["source.vsphere-iso.windows_server_2019"] 
 
   provisioner "file" {
-    source      = "scripts/postInstall.ps1"
+    source      = "/var/Packer/windows/win19/scripts/postInstall.ps1"
     destination = "C:\\Windows\\Temp\\postInstall.ps1"
   }
 
@@ -174,7 +182,7 @@ build {
   }
 
   provisioner "powershell" {
-    script = "scripts/installChocolatey.ps1"
+    script = "/var/Packer/windows/win19/scripts/installChocolatey.ps1"
   }
 
   #Initier un redémarrage de la machine
@@ -183,21 +191,21 @@ build {
   }
   
    provisioner "file" {
-    source      = "scripts/executeChocolatey.ps1"
+    source      = "/var/Packer/windows/win19/scripts/executeChocolatey.ps1"
     destination = "C:/Users/Administrateur/Desktop/executeChocolatey.ps1"
    }
 
   provisioner "powershell" {
-    script = "scripts/executeChocolatey.ps1"
+    script = "/var/Packer/windows/win19/scripts/executeChocolatey.ps1"
   }
 
    provisioner "powershell" {
-    script = "scripts/removeAutologon.ps1"
+    script = "/var/Packer/windows/win19/scripts/removeAutologon.ps1"
    }
 
    
    provisioner "file" {
-    source      = "scripts/ipStatiqueEnthern0.ps1"
+    source      = "/var/Packer/windows/win19/scripts/ipStatiqueEnthern0.ps1"
     destination = var.ps1_script_path
    }
 
