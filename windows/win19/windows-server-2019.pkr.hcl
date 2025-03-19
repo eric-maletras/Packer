@@ -91,6 +91,11 @@ variable "ip_wait_timeout" {
   default = "30m"
 }
 
+variable "boot_wait" {
+   type = string
+   default = "10m"
+}
+
 source "vsphere-iso" "windows_server_2019" {
   host		       = var.esxi_host
   vcenter_server       = var.esxi_host
@@ -110,10 +115,11 @@ source "vsphere-iso" "windows_server_2019" {
   winrm_port         = 5985
   winrm_timeout      = "40m"
 
-  pause_before_connecting = "60m"
-  boot_wait          = "60m"
+#  pause_before_connecting = "60m"
+  boot_wait       = var.boot_wait
   ip_wait_timeout = var.ip_wait_timeout
   ip_wait_address = "0.0.0.0/0"
+
 
   ssh_username       = var.windows_user
   ssh_password       = var.windows_password
@@ -169,6 +175,10 @@ source "vsphere-iso" "windows_server_2019" {
 
 build {
   sources = ["source.vsphere-iso.windows_server_2019"] 
+  
+  provisioner "windows-restart" {
+      restart_timeout = "20m"  # Augmenter le timeout si besoin
+    }
 
   provisioner "file" {
     source      = "/var/Packer/windows/win19/scripts/postInstall.ps1"

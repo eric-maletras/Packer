@@ -1,4 +1,5 @@
-esxi_host = "192.168.3.11"
+
+esxi_host = "192.168.3.13"
 
 esxi_user = "root"
 
@@ -20,7 +21,7 @@ esxi_network0 = "VM IMC"
 
 ip_network0 = {
     interface = "Ethernet0"
-    ip      = "192.168.3.101"
+    ip      = "192.168.3.121"
     netmask = "255.255.255.0"
     gw      = "192.168.3.1"
     dns     = "8.8.8.8"
@@ -38,6 +39,3 @@ ip_network1 = {
 
 
 ps1_script_path = "C:/Windows/Temp/set_static_ip.ps1"
-
-ip_wait_timeout = "40m"
-boot_wait = "30m"
