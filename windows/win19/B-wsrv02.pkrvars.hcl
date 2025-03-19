@@ -1,4 +1,3 @@
-
 esxi_host = "192.168.3.11"
 
 esxi_user = "root"
@@ -40,4 +39,4 @@ ip_network1 = {
 
 ps1_script_path = "C:/Windows/Temp/set_static_ip.ps1"
 
-ip_wait_timeout = "50mn"
+ip_wait_timeout = "40m"

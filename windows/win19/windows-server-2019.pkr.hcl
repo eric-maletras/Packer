@@ -88,8 +88,8 @@ variable "ps1_script_path" {
 
 variable "ip_wait_timeout" {
   type = string
-  default = "30mn"
-
+  default = "30m"
+}
 
 source "vsphere-iso" "windows_server_2019" {
   host		       = var.esxi_host
@@ -108,11 +108,12 @@ source "vsphere-iso" "windows_server_2019" {
   winrm_insecure     = true
   winrm_use_ssl      = false
   winrm_port         = 5985
-  winrm_timeout      = "30m"
+  winrm_timeout      = "40m"
 
-#  pause_before_connecting = "90m"
-#  boot_wait          = "90m"
+  pause_before_connecting = "60m"
+  boot_wait          = "60m"
   ip_wait_timeout = var.ip_wait_timeout
+  ip_wait_address = "0.0.0.0/0"
 
   ssh_username       = var.windows_user
   ssh_password       = var.windows_password
@@ -162,7 +163,7 @@ source "vsphere-iso" "windows_server_2019" {
   create_snapshot       = true
   snapshot_name         = "init"
 
-  shutdown_timeout = "30m"
+  shutdown_timeout = "40m"
   remove_cdrom = true
 }
 

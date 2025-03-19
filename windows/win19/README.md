@@ -1,3 +1,6 @@
+IL faut copier les VM Tools de windows dans un dossier accessible par le script:
+[datastore1] vmimages/tools-isoimages/windows.iso
+
 ATTENTION Il faut avoir la bonne version de vsphere-iso\
 AU premier lancement executer la commande packer init .
 
