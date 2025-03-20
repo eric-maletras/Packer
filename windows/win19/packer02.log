@@ -1,0 +1,1503 @@
+2025/03/19 22:17:12 [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:12 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:12 [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:12 [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:12 [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:12 [TRACE] listing potential installations for <nil> that match "". plugingetter.ListInstallationsOptions{PluginDirectory:"/root/.config/packer/plugins", BinaryInstallationOptions:plugingetter.BinaryInstallationOptions{APIVersionMajor:"5", APIVersionMinor:"0", OS:"linux", ARCH:"amd64", Ext:"", Checksummers:[]plugingetter.Checksummer{plugingetter.Checksummer{Type:"sha256", Hash:(*sha256.digest)(0xc000542080)}}, ReleasesOnly:false}}
+2025/03/19 22:17:13 [INFO] found external [clone iso supervisor] builders from vsphere plugin
+2025/03/19 22:17:13 [INFO] found external [-packer-default-plugin-name- template] post-processors from vsphere plugin
+2025/03/19 22:17:13 [TRACE] validateValue: not active for vm_tool_path, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for esxi_network0, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for ps1_script_path, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for windows_user, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for VM_domain, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for windows_password, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for esxi_network1, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for boot_wait, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for esxi_password, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for iso_path, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for ip_wait_timeout, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for esxi_host, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for datastore, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for VM_name, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for ip_network0, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for ip_network1, so skipping
+2025/03/19 22:17:13 [TRACE] validateValue: not active for esxi_user, so skipping
+2025/03/19 22:17:13 [INFO] Starting external plugin /root/.config/packer/plugins/github.com/hashicorp/vsphere/packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 start builder iso
+2025/03/19 22:17:13 Starting plugin: /root/.config/packer/plugins/github.com/hashicorp/vsphere/packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 []string{"/root/.config/packer/plugins/github.com/hashicorp/vsphere/packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64", "start", "builder", "iso"}
+2025/03/19 22:17:13 Waiting for RPC address for: /root/.config/packer/plugins/github.com/hashicorp/vsphere/packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64
+2025/03/19 22:17:13 Received unix RPC address for /root/.config/packer/plugins/github.com/hashicorp/vsphere/packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64: addr is /tmp/packer-plugin1289505484
+2025/03/19 22:17:13 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:13 Plugin address: unix /tmp/packer-plugin1289505484
+2025/03/19 22:17:13 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:13 Waiting for connection...
+2025/03/19 22:17:13 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:13 Serving a plugin connection...
+2025/03/19 22:17:13 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:13 [TRACE] starting builder iso
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-windows-restart
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-windows-restart"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: args: []string{"packer-provisioner-windows-restart"}
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin2778371770
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: Plugin address: unix /tmp/packer-plugin2778371770
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-file
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-file"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-file plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-file plugin: args: []string{"packer-provisioner-file"}
+2025/03/19 22:17:13 packer-provisioner-file plugin: Plugin address: unix /tmp/packer-plugin3386282710
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin3386282710
+2025/03/19 22:17:13 packer-provisioner-file plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-file plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-powershell
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-powershell"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin4240810200
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin4240810200
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-powershell
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-powershell"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin345698096
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin345698096
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-windows-restart
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-windows-restart"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: args: []string{"packer-provisioner-windows-restart"}
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: Plugin address: unix /tmp/packer-plugin2439202561
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin2439202561
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-windows-restart plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-file
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-file"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-file plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-file plugin: args: []string{"packer-provisioner-file"}
+2025/03/19 22:17:13 packer-provisioner-file plugin: Plugin address: unix /tmp/packer-plugin169917744
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin169917744
+2025/03/19 22:17:13 packer-provisioner-file plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-file plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-powershell
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-powershell"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin24411139
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin24411139
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-powershell
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-powershell"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin212325251
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin212325251
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-file
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-file"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-file plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-file plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-file plugin: args: []string{"packer-provisioner-file"}
+2025/03/19 22:17:13 packer-provisioner-file plugin: Plugin address: unix /tmp/packer-plugin399787849
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin399787849
+2025/03/19 22:17:13 packer-provisioner-file plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-file plugin: Serving a plugin connection...
+2025/03/19 22:17:13 [INFO] Starting internal plugin packer-provisioner-powershell
+2025/03/19 22:17:13 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "packer-provisioner-powershell"}
+2025/03/19 22:17:13 Waiting for RPC address for: /usr/bin/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Packer version: 1.11.2 [go1.21.12 linux amd64]
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /root/.cache/packer
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2025/03/19 22:17:13 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin3468354592
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin3468354592
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Waiting for connection...
+2025/03/19 22:17:13 packer-provisioner-powershell plugin: Serving a plugin connection...
+[1;32mvsphere-iso.windows_server_2019: output will be in this color.[0m
+
+2025/03/19 22:17:13 Build debug mode: false
+2025/03/19 22:17:13 Force build: true
+2025/03/19 22:17:13 On error: abort
+2025/03/19 22:17:13 Waiting on builds to complete...
+2025/03/19 22:17:13 Starting build run: vsphere-iso.windows_server_2019
+2025/03/19 22:17:13 Running builder: vsphere-iso
+2025/03/19 22:17:13 [INFO] (telemetry) Starting builder vsphere-iso.windows_server_2019
+2025/03/19 22:17:13 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:13 No URLs were provided to Step Download. Continuing...
+2025/03/19 22:17:13 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:13 No CD files specified. CD disk will not be made.
+[1;32m==> vsphere-iso.windows_server_2019: Removing the existing virtual machine at M2L-WSRV02 based on use of the '-force' option...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Creating virtual machine...[0m
+2025/03/19 22:17:22 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:22 [WARN] 192.168.3.11/Resources/ not found. Looking for default resource pool.
+[1;32m==> vsphere-iso.windows_server_2019: Customizing hardware...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Mounting ISO images...[0m
+2025/03/19 22:17:29 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:29 Check if ISO path is a Content Library path
+2025/03/19 22:17:29 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:29 vCenter client not available. ISO path not identified as a Content Library path
+2025/03/19 22:17:29 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:29 Using [datastore1] ISOs/WinServ2019.iso as the datastore path
+2025/03/19 22:17:29 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:29 Creating CD-ROM on controller '&{{{} 200 0xc0008d0240 <nil> <nil> <nil> 0 <nil> 0 <nil>} 0 []}' with iso '[datastore1] ISOs/WinServ2019.iso'
+2025/03/19 22:17:30 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:30 Check if ISO path is a Content Library path
+2025/03/19 22:17:30 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:30 vCenter client not available. ISO path not identified as a Content Library path
+2025/03/19 22:17:30 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:30 Using [datastore1] vmimages/tools-isoimages/windows.iso as the datastore path
+2025/03/19 22:17:30 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:30 Creating CD-ROM on controller '&{{{} 200 0xc0006668a0 <nil> <nil> <nil> 0 <nil> 0 <nil>} 0 [3000]}' with iso '[datastore1] vmimages/tools-isoimages/windows.iso'
+[1;32m==> vsphere-iso.windows_server_2019: Adding configuration parameters...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Creating floppy disk...[0m
+2025/03/19 22:17:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:31 Floppy path: /tmp/packer3867762932
+2025/03/19 22:17:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:31 Initializing block device backed by temporary file
+2025/03/19 22:17:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:31 Formatting the block device with a FAT filesystem...
+2025/03/19 22:17:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:31 Initializing FAT filesystem on block device
+[0;32m    vsphere-iso.windows_server_2019: Copying files flatly from floppy_files[0m
+2025/03/19 22:17:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:31 Reading the root directory from the filesystem
+[0;32m    vsphere-iso.windows_server_2019: Copying file: /var/Packer/windows/win19/scripts/autounattend.xml[0m
+[0;32m    vsphere-iso.windows_server_2019: Copying file: /var/Packer/windows/win19/scripts/install-vm-tools.cmd[0m
+[0;32m    vsphere-iso.windows_server_2019: Copying file: /var/Packer/windows/win19/scripts/enable-winrm.ps1[0m
+[0;32m    vsphere-iso.windows_server_2019: Done copying files from floppy_files[0m
+[0;32m    vsphere-iso.windows_server_2019: Collecting paths from floppy_dirs[0m
+[0;32m    vsphere-iso.windows_server_2019: Resulting paths from floppy_dirs : [][0m
+[0;32m    vsphere-iso.windows_server_2019: Done copying paths from floppy_dirs[0m
+[0;32m    vsphere-iso.windows_server_2019: Copying files from floppy_content[0m
+[0;32m    vsphere-iso.windows_server_2019: Done copying files from floppy_content[0m
+[1;32m==> vsphere-iso.windows_server_2019: Uploading floppy image...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Adding generated floppy image...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Setting temporary boot order...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Powering on virtual machine...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Waiting for IP...[0m
+2025/03/19 22:17:39 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:17:39 [INFO] Waiting for IP, up to total timeout: 55m0s, settle timeout: 5s
+2025/03/19 22:56:33 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:33 VM IP acquired: 169.254.135.62
+2025/03/19 22:56:33 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:33 VM IP changed from 169.254.135.62 to 192.168.3.55
+2025/03/19 22:56:33 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:33 VM IP is still the same: 192.168.3.55
+2025/03/19 22:56:34 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:34 VM IP is still the same: 192.168.3.55
+2025/03/19 22:56:35 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:35 VM IP is still the same: 192.168.3.55
+2025/03/19 22:56:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:36 VM IP is still the same: 192.168.3.55
+2025/03/19 22:56:37 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:37 VM IP is still the same: 192.168.3.55
+[1;32m==> vsphere-iso.windows_server_2019: IP address: 192.168.3.55[0m
+[1;32m==> vsphere-iso.windows_server_2019: Using WinRM communicator to connect: 192.168.3.55[0m
+[1;32m==> vsphere-iso.windows_server_2019: Waiting for WinRM to become available...[0m
+2025/03/19 22:56:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:38 VM IP is still the same: 192.168.3.55
+2025/03/19 22:56:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:38 VM IP seems stable enough: 192.168.3.55
+2025/03/19 22:56:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:38 Waiting for WinRM, up to timeout: 40m0s
+2025/03/19 22:56:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:38 [INFO] Attempting WinRM connection...
+2025/03/19 22:56:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:38 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:56:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:38 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:56:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:38 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:56:43 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:43 [INFO] Attempting WinRM connection...
+2025/03/19 22:56:43 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:43 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:56:43 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:43 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:56:43 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:43 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:56:48 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:48 [INFO] Attempting WinRM connection...
+2025/03/19 22:56:48 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:48 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:56:48 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:48 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:56:48 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:48 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:56:53 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:53 [INFO] Attempting WinRM connection...
+2025/03/19 22:56:53 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:53 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:56:53 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:53 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:56:53 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:53 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:56:58 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:58 [INFO] Attempting WinRM connection...
+2025/03/19 22:56:58 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:56:58 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:57:28 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:28 [ERROR] connection error: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: i/o timeout
+2025/03/19 22:57:28 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:28 [ERROR] WinRM connection err: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: i/o timeout
+2025/03/19 22:57:33 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:33 [INFO] Attempting WinRM connection...
+2025/03/19 22:57:33 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:33 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:57:50 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:50 [ERROR] connection error: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: connection refused
+2025/03/19 22:57:50 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:50 [ERROR] WinRM connection err: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: connection refused
+2025/03/19 22:57:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:55 [INFO] Attempting WinRM connection...
+2025/03/19 22:57:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:55 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:57:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:55 [ERROR] connection error: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: connection refused
+2025/03/19 22:57:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:57:55 [ERROR] WinRM connection err: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: connection refused
+2025/03/19 22:58:00 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:00 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:00 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:00 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:00 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:00 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:00 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:00 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:05 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:05 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:05 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:05 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:05 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:05 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:05 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:05 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:10 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:10 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:10 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:10 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:10 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:10 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:10 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:10 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:15 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:15 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:15 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:15 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:15 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:15 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:15 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:15 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:20 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:20 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:20 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:20 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:20 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:20 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:20 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:20 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:25 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:25 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:25 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:25 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:26 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:26 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:31 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:31 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:31 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:31 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:36 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:36 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:36 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:36 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:41 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:41 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:41 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:41 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:46 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:46 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:46 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:46 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:51 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:51 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:51 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:51 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:58:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:56 [INFO] Attempting WinRM connection...
+2025/03/19 22:58:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:56 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:58:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:56 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:58:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:58:56 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:01 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:01 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:01 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:01 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:06 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:06 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:06 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:06 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:11 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:11 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:11 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:11 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:16 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:16 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:16 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:16 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:21 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:21 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:21 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:21 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:26 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:26 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:26 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:26 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:31 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:31 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:31 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:31 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:36 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:36 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:36 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:36 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:41 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:41 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:41 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:41 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:46 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:46 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:46 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:46 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:51 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:51 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:51 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:51 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 22:59:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:56 [INFO] Attempting WinRM connection...
+2025/03/19 22:59:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:56 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 22:59:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:56 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 22:59:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 22:59:56 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:01 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:01 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:01 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:01 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:06 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:06 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:06 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:06 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:11 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:11 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:11 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:11 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:16 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:16 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:16 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:16 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:21 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:21 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:21 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:21 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:26 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:26 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:26 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:26 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:31 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:31 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:31 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:31 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:36 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:36 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:36 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:36 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:41 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:41 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:41 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:41 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:46 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:46 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:46 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:46 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:51 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:51 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:51 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:51 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:00:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:56 [INFO] Attempting WinRM connection...
+2025/03/19 23:00:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:56 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:00:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:56 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:00:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:00:56 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:01 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:01 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:01 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:01 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:06 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:06 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:06 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:06 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:11 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:11 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:11 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:11 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:11 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:16 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:16 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:16 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:16 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:21 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:21 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:21 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:21 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:21 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:26 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:26 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:26 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:26 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:26 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:31 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:31 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:31 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:31 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:31 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:36 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:36 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:36 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:36 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:41 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:41 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:41 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:41 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:46 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:46 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:46 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:46 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:51 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:51 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:51 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:51 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:01:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:56 [INFO] Attempting WinRM connection...
+2025/03/19 23:01:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:56 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:01:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:56 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:01:56 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:01:56 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:02:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:01 [INFO] Attempting WinRM connection...
+2025/03/19 23:02:01 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:01 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:02:02 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:02 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:02:02 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:02 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:02:07 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:07 [INFO] Attempting WinRM connection...
+2025/03/19 23:02:07 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:07 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:02:07 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:07 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:02:07 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:07 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:02:12 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:12 [INFO] Attempting WinRM connection...
+2025/03/19 23:02:12 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:12 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:02:12 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:12 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:02:12 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:12 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:02:17 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:17 [INFO] Attempting WinRM connection...
+2025/03/19 23:02:17 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:17 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:02:17 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:17 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:02:17 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:17 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:02:22 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:22 [INFO] Attempting WinRM connection...
+2025/03/19 23:02:22 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:22 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:02:22 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:22 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:02:22 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:22 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:02:27 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:27 [INFO] Attempting WinRM connection...
+2025/03/19 23:02:27 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:27 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:02:27 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:27 [ERROR] connection error: http response error: 401 - invalid content type
+2025/03/19 23:02:27 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:27 [ERROR] WinRM connection err: http response error: 401 - invalid content type
+2025/03/19 23:02:32 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:32 [INFO] Attempting WinRM connection...
+2025/03/19 23:02:32 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:32 [DEBUG] connecting to remote shell using WinRM
+2025/03/19 23:02:37 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:37 Checking that WinRM is connected with: 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA=='
+2025/03/19 23:02:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:38 [INFO] starting remote command: powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA==
+2025/03/19 23:02:45 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:45 [INFO] command 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA==' exited with code: 0
+2025/03/19 23:02:45 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:45 Connected to machine
+2025/03/19 23:02:45 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:45 Running the provision hook
+2025/03/19 23:02:45 [INFO] (telemetry) Starting provisioner windows-restart
+[0;32m    vsphere-iso.windows_server_2019: WinRM connected.[0m
+[1;32m==> vsphere-iso.windows_server_2019: Connected to WinRM![0m
+[1;32m==> vsphere-iso.windows_server_2019: Restarting Machine[0m
+2025/03/19 23:02:45 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:45 [INFO] starting remote command: shutdown /r /f /t 0 /c "packer restart"
+2025/03/19 23:02:45 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:45 [INFO] command 'shutdown /r /f /t 0 /c "packer restart"' exited with code: 0
+2025/03/19 23:02:45 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:45 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:02:45 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:02:45 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:02:45 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:02:45 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:02:45 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:02:45 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:02:45 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 0
+[1;32m==> vsphere-iso.windows_server_2019: Waiting for machine to restart...[0m
+2025/03/19 23:02:45 packer-provisioner-windows-restart plugin: Check if machine is rebooting...
+2025/03/19 23:02:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:46 [INFO] starting remote command: shutdown /r /f /t 60 /c "packer restart test"
+2025/03/19 23:02:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:46 [INFO] command 'shutdown /r /f /t 60 /c "packer restart test"' exited with code: 1115
+2025/03/19 23:02:46 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:02:46 [INFO] 39 bytes written for 'stderr'
+2025/03/19 23:02:46 [INFO] RPC client: Communicator ended with: 1115
+2025/03/19 23:02:46 [INFO] RPC endpoint: Communicator ended with: 1115
+2025/03/19 23:02:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:02:46 [INFO] RPC endpoint: Communicator ended with: 1115
+2025/03/19 23:02:46 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:02:46 packer-provisioner-windows-restart plugin: [INFO] 39 bytes written for 'stderr'
+2025/03/19 23:02:46 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 1115
+[1;31m==> vsphere-iso.windows_server_2019: Un arrêt système est en cours.(1115)[0m
+2025/03/19 23:02:46 packer-provisioner-windows-restart plugin: Reboot already in progress, waiting...
+2025/03/19 23:02:56 packer-provisioner-windows-restart plugin: Check if machine is rebooting...
+2025/03/19 23:03:26 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:03:26 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:03:26 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:03:26 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:03:26 packer-provisioner-windows-restart plugin: Waiting for machine to reboot with timeout: 20m0s
+2025/03/19 23:03:26 packer-provisioner-windows-restart plugin: Waiting for machine to become available...
+2025/03/19 23:03:26 packer-provisioner-windows-restart plugin: Checking that communicator is connected with: 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA'
+2025/03/19 23:03:49 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:03:49 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:03:49 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:03:49 packer-provisioner-windows-restart plugin: [ERROR] failed to run restart command on guest: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host. Build may hang.
+2025/03/19 23:03:49 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2025/03/19 23:03:49 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:03:57 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:03:57 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:03:57 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:03:57 packer-provisioner-windows-restart plugin: [ERROR] failed to run restart command on guest: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host. Build may hang.
+2025/03/19 23:03:57 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2025/03/19 23:03:57 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:04:05 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:04:05 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:04:05 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:04:05 packer-provisioner-windows-restart plugin: [ERROR] failed to run restart command on guest: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host. Build may hang.
+2025/03/19 23:04:05 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2025/03/19 23:04:05 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:04:14 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:04:14 [INFO] starting remote command: powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA
+2025/03/19 23:04:59 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:04:59 [INFO] command 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA' exited with code: 0
+[0;32m    vsphere-iso.windows_server_2019: WINLABO-9CS3NKE restarted.[0m
+[1;32m==> vsphere-iso.windows_server_2019: Machine successfully restarted, moving on[0m
+[1;32m==> vsphere-iso.windows_server_2019: Uploading /var/Packer/windows/win19/scripts/postInstall.ps1 => C:\Windows\Temp\postInstall.ps1[0m
+2025/03/19 23:04:59 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:04:59 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:04:59 [INFO] 28 bytes written for 'stdout'
+2025/03/19 23:04:59 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:04:59 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:04:59 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:04:59 packer-provisioner-windows-restart plugin: [INFO] 28 bytes written for 'stdout'
+2025/03/19 23:04:59 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:04:59 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:04:59 [INFO] (telemetry) ending windows-restart
+2025/03/19 23:04:59 [INFO] (telemetry) Starting provisioner file
+2025/03/19 23:04:59 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:04:59 Uploading file to 'C:\Windows\Temp\postInstall.ps1'
+2025/03/19 23:04:59 packer-provisioner-file plugin: [INFO] 4719 bytes written for 'uploadData'
+2025/03/19 23:04:59 [INFO] 4719 bytes written for 'uploadData'
+[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [=======================================================================] 100.00%
+2025/03/19 23:05:17 packer-provisioner-file plugin: closing
+2025/03/19 23:05:17 closing
+2025/03/19 23:05:17 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:05:17 closing
+[1A[0;32m    vsphere-iso.windows_server_2019: postInstall.ps1[0m 4.61 KiB / 4.61 KiB [===================================================================] 100.00% 17s
+2025/03/19 23:05:17 [INFO] (telemetry) ending file
+2025/03/19 23:05:17 [INFO] (telemetry) Starting provisioner powershell
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with Powershell...[0m
+2025/03/19 23:05:17 packer-provisioner-powershell plugin: Found command: powershell.exe -File C:\Windows\Temp\postInstall.ps1 -Hostname M2L-WSRV02 -DNSDomain labo.lan
+2025/03/19 23:05:17 packer-provisioner-powershell plugin: Found command: Remove-Item -Force C:\Windows\Temp\postInstall.ps1
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with powershell script: /tmp/powershell-provisioner3745327890[0m
+2025/03/19 23:05:17 packer-provisioner-powershell plugin: Opening /tmp/powershell-provisioner3745327890 for reading
+2025/03/19 23:05:17 packer-provisioner-powershell plugin: Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-67db3f9d-3319-1ef1-2ed6-0f560e469d12.ps1
+2025/03/19 23:05:17 packer-provisioner-powershell plugin: [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:05:17 [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:05:17 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:05:17 Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-67db3f9d-3319-1ef1-2ed6-0f560e469d12.ps1'
+2025/03/19 23:05:25 packer-provisioner-powershell plugin: [INFO] 145 bytes written for 'uploadData'
+2025/03/19 23:05:25 [INFO] 145 bytes written for 'uploadData'
+2025/03/19 23:05:25 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:05:25 Uploading file to 'c:/Windows/Temp/script-67db3f9d-b596-9be8-6977-b388b02d1631.ps1'
+2025/03/19 23:05:35 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:05:35 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db3f9d-3319-1ef1-2ed6-0f560e469d12.ps1; &'c:/Windows/Temp/script-67db3f9d-b596-9be8-6977-b388b02d1631.ps1'; exit $LastExitCode }"
+[0;32m    vsphere-iso.windows_server_2019: Desactivation du mot de passe[0m
+[0;32m    vsphere-iso.windows_server_2019: Activation du bureau a distance[0m
+[0;32m    vsphere-iso.windows_server_2019: Autorisation du Ping[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Name                  : {dd684865-5a29-4cc6-a2b8-ca151c2943fd}[0m
+[0;32m    vsphere-iso.windows_server_2019: DisplayName           : Allow Ping Inbound[0m
+[0;32m    vsphere-iso.windows_server_2019: Description           :[0m
+[0;32m    vsphere-iso.windows_server_2019: DisplayGroup          :[0m
+[0;32m    vsphere-iso.windows_server_2019: Group                 :[0m
+[0;32m    vsphere-iso.windows_server_2019: Enabled               : True[0m
+[0;32m    vsphere-iso.windows_server_2019: Profile               : Any[0m
+[0;32m    vsphere-iso.windows_server_2019: Platform              : {}[0m
+[0;32m    vsphere-iso.windows_server_2019: Direction             : Inbound[0m
+[0;32m    vsphere-iso.windows_server_2019: Action                : Allow[0m
+[0;32m    vsphere-iso.windows_server_2019: EdgeTraversalPolicy   : Block[0m
+[0;32m    vsphere-iso.windows_server_2019: LooseSourceMapping    : False[0m
+[0;32m    vsphere-iso.windows_server_2019: LocalOnlyMapping      : False[0m
+[0;32m    vsphere-iso.windows_server_2019: Owner                 :[0m
+[0;32m    vsphere-iso.windows_server_2019: PrimaryStatus         : OK[0m
+[0;32m    vsphere-iso.windows_server_2019: Status                : La règle a été analysée à partir de la banque. (65536)[0m
+[0;32m    vsphere-iso.windows_server_2019: EnforcementStatus     : NotApplicable[0m
+[0;32m    vsphere-iso.windows_server_2019: PolicyStoreSource     : PersistentStore[0m
+[0;32m    vsphere-iso.windows_server_2019: PolicyStoreSourceType : Local[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Name                  : {7f4df74c-60b9-45a8-81bf-65725500f9ac}[0m
+[0;32m    vsphere-iso.windows_server_2019: DisplayName           : Allow Ping Outbound[0m
+[0;32m    vsphere-iso.windows_server_2019: Description           :[0m
+[0;32m    vsphere-iso.windows_server_2019: DisplayGroup          :[0m
+[0;32m    vsphere-iso.windows_server_2019: Group                 :[0m
+[0;32m    vsphere-iso.windows_server_2019: Enabled               : True[0m
+[0;32m    vsphere-iso.windows_server_2019: Profile               : Any[0m
+[0;32m    vsphere-iso.windows_server_2019: Platform              : {}[0m
+[0;32m    vsphere-iso.windows_server_2019: Direction             : Outbound[0m
+[0;32m    vsphere-iso.windows_server_2019: Action                : Allow[0m
+[0;32m    vsphere-iso.windows_server_2019: EdgeTraversalPolicy   : Block[0m
+[0;32m    vsphere-iso.windows_server_2019: LooseSourceMapping    : False[0m
+[0;32m    vsphere-iso.windows_server_2019: LocalOnlyMapping      : False[0m
+[0;32m    vsphere-iso.windows_server_2019: Owner                 :[0m
+[0;32m    vsphere-iso.windows_server_2019: PrimaryStatus         : OK[0m
+[0;32m    vsphere-iso.windows_server_2019: Status                : La règle a été analysée à partir de la banque. (65536)[0m
+[0;32m    vsphere-iso.windows_server_2019: EnforcementStatus     : NotApplicable[0m
+[0;32m    vsphere-iso.windows_server_2019: PolicyStoreSource     : PersistentStore[0m
+[0;32m    vsphere-iso.windows_server_2019: PolicyStoreSourceType : Local[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Desactivation de la sÃ©curitÃ© d'IE[0m
+[0;32m    vsphere-iso.windows_server_2019: IE ESC dÃ©sactivÃ© pour les administrateurs.[0m
+[0;32m    vsphere-iso.windows_server_2019: IE ESC dÃ©sactivÃ© pour les utilisateurs.[0m
+[0;32m    vsphere-iso.windows_server_2019: Modification du nom[0m
+[0;32m    vsphere-iso.windows_server_2019: AVERTISSEMENT : Les modifications seront prises en compte après le redémarrage de l'ordinateur WINLABO-9CS3NKE.[0m
+[0;32m    vsphere-iso.windows_server_2019: Modification du suffice DNS[0m
+[0;32m    vsphere-iso.windows_server_2019: Le nÂ° est : 1[0m
+[0;32m    vsphere-iso.windows_server_2019: Le disque avec la lettre F est associÃ© au numÃ©ro 1.[0m
+[0;32m    vsphere-iso.windows_server_2019: Suppression de l'attribut 'lecture seule'...[0m
+[0;32m    vsphere-iso.windows_server_2019: L'attribut 'lecture seule' a Ã©tÃ© supprimÃ©.[0m
+[0;32m    vsphere-iso.windows_server_2019: Fin du script[0m
+2025/03/19 23:06:42 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:06:42 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db3f9d-3319-1ef1-2ed6-0f560e469d12.ps1; &'c:/Windows/Temp/script-67db3f9d-b596-9be8-6977-b388b02d1631.ps1'; exit $LastExitCode }"' exited with code: 0
+[0;32m    vsphere-iso.windows_server_2019:[0m
+2025/03/19 23:06:42 [INFO] 1942 bytes written for 'stdout'
+2025/03/19 23:06:42 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:06:42 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:06:42 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:06:42 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:06:42 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:06:42 packer-provisioner-powershell plugin: [INFO] 1942 bytes written for 'stdout'
+2025/03/19 23:06:42 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:06:42 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:06:42 packer-provisioner-powershell plugin: c:/Windows/Temp/script-67db3f9d-b596-9be8-6977-b388b02d1631.ps1 returned with exit code 0
+2025/03/19 23:06:42 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:06:42 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:06:42 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:06:42 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db3f9d-cc14-17de-56b5-307971a52c22.ps1'
+[0;32m    vsphere-iso.windows_server_2019:[0m
+2025/03/19 23:06:49 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:06:49 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db3f9d-3319-1ef1-2ed6-0f560e469d12.ps1; &'c:/Windows/Temp/packer-cleanup-67db3f9d-cc14-17de-56b5-307971a52c22.ps1'; exit $LastExitCode }"
+2025/03/19 23:06:52 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:06:52 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db3f9d-3319-1ef1-2ed6-0f560e469d12.ps1; &'c:/Windows/Temp/packer-cleanup-67db3f9d-cc14-17de-56b5-307971a52c22.ps1'; exit $LastExitCode }"' exited with code: 0
+2025/03/19 23:06:52 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:06:52 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:06:52 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:06:52 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:06:52 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:06:52 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:06:52 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:06:52 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:06:52 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:06:52 [INFO] (telemetry) ending powershell
+2025/03/19 23:06:52 [INFO] (telemetry) Starting provisioner powershell
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with Powershell...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with powershell script: /var/Packer/windows/win19/scripts/installChocolatey.ps1[0m
+2025/03/19 23:06:52 packer-provisioner-powershell plugin: Opening /var/Packer/windows/win19/scripts/installChocolatey.ps1 for reading
+2025/03/19 23:06:52 packer-provisioner-powershell plugin: Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-67db3ffc-54a0-df3b-71b4-96af32840b7e.ps1
+2025/03/19 23:06:52 packer-provisioner-powershell plugin: [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:06:52 [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:06:52 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:06:52 Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-67db3ffc-54a0-df3b-71b4-96af32840b7e.ps1'
+2025/03/19 23:06:58 packer-provisioner-powershell plugin: [INFO] 353 bytes written for 'uploadData'
+2025/03/19 23:06:58 [INFO] 353 bytes written for 'uploadData'
+2025/03/19 23:06:58 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:06:58 Uploading file to 'c:/Windows/Temp/script-67db3ffc-e57c-b891-8dd8-5e0025e0d11d.ps1'
+2025/03/19 23:07:06 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:07:06 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db3ffc-54a0-df3b-71b4-96af32840b7e.ps1; &'c:/Windows/Temp/script-67db3ffc-e57c-b891-8dd8-5e0025e0d11d.ps1'; exit $LastExitCode }"
+[0;32m    vsphere-iso.windows_server_2019: TÃ©lÃ©charger et installer Chocolatey[0m
+[0;32m    vsphere-iso.windows_server_2019: Forcing web requests to allow TLS v1.2 (Required for requests to Chocolatey.org)[0m
+[0;32m    vsphere-iso.windows_server_2019: Getting latest version of the Chocolatey package for download.[0m
+[0;32m    vsphere-iso.windows_server_2019: Not using proxy.[0m
+[0;32m    vsphere-iso.windows_server_2019: Getting Chocolatey from https://community.chocolatey.org/api/v2/package/chocolatey/2.4.3.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading https://community.chocolatey.org/api/v2/package/chocolatey/2.4.3 to C:\Users\ADMINI~1\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip[0m
+[0;32m    vsphere-iso.windows_server_2019: Not using proxy.[0m
+[0;32m    vsphere-iso.windows_server_2019: Extracting C:\Users\ADMINI~1\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip to C:\Users\ADMINI~1\AppData\Local\Temp\chocolatey\chocoInstall[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing Chocolatey on the local machine[0m
+[0;32m    vsphere-iso.windows_server_2019: The registry key for .Net 4.8 was not found or this is forced[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading 'https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/8494001c276a4b96804cde7829c04d7f/ndp48-x86-x64-allos-enu.exe' to 'C:\Users\ADMINI~1\AppData\Local\Temp\ndp48-x86-x64-allos-enu.exe' - the installer is 100+ MBs, so this could take a while on a slow connection.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing 'C:\Users\ADMINI~1\AppData\Local\Temp\ndp48-x86-x64-allos-enu.exe' - this may take awhile with no output.[0m
+[0;32m    vsphere-iso.windows_server_2019: AVERTISSEMENT : .NET Framework 4.8 was installed, but a reboot is required before using Chocolatey CLI.[0m
+[0;32m    vsphere-iso.windows_server_2019: Creating ChocolateyInstall as an environment variable (targeting 'Machine')[0m
+[0;32m    vsphere-iso.windows_server_2019:   Setting ChocolateyInstall to 'C:\ProgramData\chocolatey'[0m
+[0;32m    vsphere-iso.windows_server_2019: WARNING: It's very likely you will need to close and reopen your shell[0m
+[0;32m    vsphere-iso.windows_server_2019:   before you can use choco.[0m
+[0;32m    vsphere-iso.windows_server_2019: Restricting write permissions to Administrators[0m
+[0;32m    vsphere-iso.windows_server_2019: We are setting up the Chocolatey package repository.[0m
+[0;32m    vsphere-iso.windows_server_2019: The packages themselves go to 'C:\ProgramData\chocolatey\lib'[0m
+[0;32m    vsphere-iso.windows_server_2019:   (i.e. C:\ProgramData\chocolatey\lib\yourPackageName).[0m
+[0;32m    vsphere-iso.windows_server_2019: A shim file for the command line goes to 'C:\ProgramData\chocolatey\bin'[0m
+[0;32m    vsphere-iso.windows_server_2019:   and points to an executable in 'C:\ProgramData\chocolatey\lib\yourPackageName'.[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Creating Chocolatey CLI folders if they do not already exist.[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey.nupkg file not installed in lib.[0m
+[0;32m    vsphere-iso.windows_server_2019:  Attempting to locate it from bootstrapper.[0m
+[0;32m    vsphere-iso.windows_server_2019: PATH environment variable does not have C:\ProgramData\chocolatey\bin in it. Adding...[0m
+2025/03/19 23:19:35 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:35 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db3ffc-54a0-df3b-71b4-96af32840b7e.ps1; &'c:/Windows/Temp/script-67db3ffc-e57c-b891-8dd8-5e0025e0d11d.ps1'; exit $LastExitCode }"' exited with code: 0
+2025/03/19 23:19:35 [INFO] 2483 bytes written for 'stdout'
+2025/03/19 23:19:35 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:35 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:19:35 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:19:35 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:19:35 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:19:35 packer-provisioner-powershell plugin: [INFO] 2483 bytes written for 'stdout'
+2025/03/19 23:19:35 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:19:35 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vsphere-iso.windows_server_2019: AVERTISSEMENT : Not setting tab completion: Profile file does not exist at[0m
+[0;32m    vsphere-iso.windows_server_2019: 'C:\Users\Administrateur\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1'.[0m
+[0;32m    vsphere-iso.windows_server_2019: Chocolatey CLI (choco.exe) is nearly ready.[0m
+2025/03/19 23:19:35 packer-provisioner-powershell plugin: c:/Windows/Temp/script-67db3ffc-e57c-b891-8dd8-5e0025e0d11d.ps1 returned with exit code 0
+2025/03/19 23:19:35 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:19:35 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:19:35 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:35 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db3ffc-5d79-156e-d04c-c63fb02cc8c6.ps1'
+[0;32m    vsphere-iso.windows_server_2019: You need to restart this machine prior to using choco.[0m
+[0;32m    vsphere-iso.windows_server_2019: Ensuring Chocolatey commands are on the path[0m
+[0;32m    vsphere-iso.windows_server_2019: Ensuring chocolatey.nupkg is in the lib folder[0m
+2025/03/19 23:19:41 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:41 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db3ffc-54a0-df3b-71b4-96af32840b7e.ps1; &'c:/Windows/Temp/packer-cleanup-67db3ffc-5d79-156e-d04c-c63fb02cc8c6.ps1'; exit $LastExitCode }"
+2025/03/19 23:19:44 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:19:44 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:19:44 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:44 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db3ffc-54a0-df3b-71b4-96af32840b7e.ps1; &'c:/Windows/Temp/packer-cleanup-67db3ffc-5d79-156e-d04c-c63fb02cc8c6.ps1'; exit $LastExitCode }"' exited with code: 0
+2025/03/19 23:19:44 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:44 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:19:44 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:19:44 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:19:44 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:19:44 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:19:44 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:19:44 [INFO] (telemetry) ending powershell
+2025/03/19 23:19:44 [INFO] (telemetry) Starting provisioner windows-restart
+[1;32m==> vsphere-iso.windows_server_2019: Restarting Machine[0m
+2025/03/19 23:19:44 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:44 [INFO] starting remote command: shutdown /r /f /t 0 /c "packer restart"
+2025/03/19 23:19:44 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:44 [INFO] command 'shutdown /r /f /t 0 /c "packer restart"' exited with code: 0
+2025/03/19 23:19:44 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:19:44 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:44 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:19:44 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:19:44 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:19:44 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:19:44 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:19:44 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:19:44 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 0
+[1;32m==> vsphere-iso.windows_server_2019: Waiting for machine to restart...[0m
+2025/03/19 23:19:44 packer-provisioner-windows-restart plugin: Check if machine is rebooting...
+2025/03/19 23:19:44 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:44 [INFO] starting remote command: shutdown /r /f /t 60 /c "packer restart test"
+2025/03/19 23:19:45 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:45 [INFO] command 'shutdown /r /f /t 60 /c "packer restart test"' exited with code: 1115
+2025/03/19 23:19:45 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:19:45 [INFO] 39 bytes written for 'stderr'
+2025/03/19 23:19:45 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:45 [INFO] RPC endpoint: Communicator ended with: 1115
+2025/03/19 23:19:45 [INFO] RPC client: Communicator ended with: 1115
+2025/03/19 23:19:45 [INFO] RPC endpoint: Communicator ended with: 1115
+2025/03/19 23:19:45 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:19:45 packer-provisioner-windows-restart plugin: [INFO] 39 bytes written for 'stderr'
+2025/03/19 23:19:45 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 1115
+[1;31m==> vsphere-iso.windows_server_2019: Un arrêt système est en cours.(1115)[0m
+2025/03/19 23:19:45 packer-provisioner-windows-restart plugin: Reboot already in progress, waiting...
+2025/03/19 23:19:55 packer-provisioner-windows-restart plugin: Check if machine is rebooting...
+2025/03/19 23:19:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:55 [INFO] starting remote command: shutdown /r /f /t 60 /c "packer restart test"
+2025/03/19 23:19:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:55 [INFO] command 'shutdown /r /f /t 60 /c "packer restart test"' exited with code: 1115
+2025/03/19 23:19:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:19:55 [INFO] RPC endpoint: Communicator ended with: 1115
+2025/03/19 23:19:55 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:19:55 [INFO] 39 bytes written for 'stderr'
+2025/03/19 23:19:55 [INFO] RPC client: Communicator ended with: 1115
+2025/03/19 23:19:55 [INFO] RPC endpoint: Communicator ended with: 1115
+2025/03/19 23:19:55 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:19:55 packer-provisioner-windows-restart plugin: [INFO] 39 bytes written for 'stderr'
+2025/03/19 23:19:55 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 1115
+[1;31m==> vsphere-iso.windows_server_2019: Un arrêt système est en cours.(1115)[0m
+2025/03/19 23:19:55 packer-provisioner-windows-restart plugin: Reboot already in progress, waiting...
+2025/03/19 23:20:05 packer-provisioner-windows-restart plugin: Check if machine is rebooting...
+2025/03/19 23:21:55 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:21:55 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:21:55 packer-provisioner-windows-restart plugin: Waiting for machine to reboot with timeout: 5m0s
+2025/03/19 23:21:55 packer-provisioner-windows-restart plugin: Waiting for machine to become available...
+2025/03/19 23:21:55 packer-provisioner-windows-restart plugin: Checking that communicator is connected with: 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA'
+2025/03/19 23:21:55 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:21:55 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:22:30 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:22:30 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:22:30 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:22:30 packer-provisioner-windows-restart plugin: [ERROR] failed to run restart command on guest: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: i/o timeout. Build may hang.
+2025/03/19 23:22:30 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2025/03/19 23:22:30 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:22:53 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:22:53 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:22:53 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:22:53 packer-provisioner-windows-restart plugin: [ERROR] failed to run restart command on guest: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host. Build may hang.
+2025/03/19 23:22:53 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2025/03/19 23:22:53 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:23:01 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:23:01 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:23:01 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:23:01 packer-provisioner-windows-restart plugin: [ERROR] failed to run restart command on guest: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host. Build may hang.
+2025/03/19 23:23:01 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2025/03/19 23:23:01 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:23:06 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:23:06 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:23:06 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:23:06 packer-provisioner-windows-restart plugin: [ERROR] failed to run restart command on guest: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: connection refused. Build may hang.
+2025/03/19 23:23:06 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2025/03/19 23:23:06 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:23:16 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:23:16 [INFO] starting remote command: powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA
+2025/03/19 23:24:20 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:24:20 [INFO] command 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA' exited with code: 0
+[0;32m    vsphere-iso.windows_server_2019: M2L-WSRV02 restarted.[0m
+[1;32m==> vsphere-iso.windows_server_2019: Machine successfully restarted, moving on[0m
+2025/03/19 23:24:20 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:24:20 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:24:20 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:24:20 [INFO] 23 bytes written for 'stdout'
+2025/03/19 23:24:20 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:24:20 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:24:20 packer-provisioner-windows-restart plugin: [INFO] 23 bytes written for 'stdout'
+2025/03/19 23:24:20 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:24:20 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:24:20 [INFO] (telemetry) ending windows-restart
+2025/03/19 23:24:20 [INFO] (telemetry) Starting provisioner file
+[1;32m==> vsphere-iso.windows_server_2019: Uploading /var/Packer/windows/win19/scripts/executeChocolatey.ps1 => C:/Users/Administrateur/Desktop/executeChocolatey.ps1[0m
+2025/03/19 23:24:20 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:24:20 Uploading file to 'C:/Users/Administrateur/Desktop/executeChocolatey.ps1'
+2025/03/19 23:24:20 packer-provisioner-file plugin: [INFO] 358 bytes written for 'uploadData'
+2025/03/19 23:24:20 [INFO] 358 bytes written for 'uploadData'
+[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [=======================================================================] 100.00%
+2025/03/19 23:24:30 packer-provisioner-file plugin: closing
+2025/03/19 23:24:30 closing
+2025/03/19 23:24:30 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:24:30 closing
+[1A[0;32m    vsphere-iso.windows_server_2019: executeChocolatey.ps1[0m 358 B / 358 B [===================================================================] 100.00% 10s
+2025/03/19 23:24:30 [INFO] (telemetry) ending file
+2025/03/19 23:24:30 [INFO] (telemetry) Starting provisioner powershell
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with Powershell...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with powershell script: /var/Packer/windows/win19/scripts/executeChocolatey.ps1[0m
+2025/03/19 23:24:30 packer-provisioner-powershell plugin: Opening /var/Packer/windows/win19/scripts/executeChocolatey.ps1 for reading
+2025/03/19 23:24:30 packer-provisioner-powershell plugin: Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-67db441e-e91d-d702-eba4-d04c741e6187.ps1
+2025/03/19 23:24:30 packer-provisioner-powershell plugin: [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:24:30 [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:24:30 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:24:30 Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-67db441e-e91d-d702-eba4-d04c741e6187.ps1'
+2025/03/19 23:24:38 packer-provisioner-powershell plugin: [INFO] 358 bytes written for 'uploadData'
+2025/03/19 23:24:38 [INFO] 358 bytes written for 'uploadData'
+2025/03/19 23:24:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:24:38 Uploading file to 'c:/Windows/Temp/script-67db441e-6cd7-bf61-f543-cf3723560c22.ps1'
+2025/03/19 23:24:47 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:24:47 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db441e-e91d-d702-eba4-d04c741e6187.ps1; &'c:/Windows/Temp/script-67db441e-6cd7-bf61-f543-cf3723560c22.ps1'; exit $LastExitCode }"
+[0;32m    vsphere-iso.windows_server_2019: Intallation des logiciels via Chocolatey[0m
+[0;32m    vsphere-iso.windows_server_2019: Chocolatey v2.4.3[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing the following packages:[0m
+[0;32m    vsphere-iso.windows_server_2019: googlechrome;firefox;7zip;python311;filezilla;notepadplusplus;winscp;putty.install[0m
+[0;32m    vsphere-iso.windows_server_2019: By installing, you accept licenses for the packages.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading chocolatey-compatibility.extension 1.0.0... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-compatibility.extension v1.0.0 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-compatibility.extension package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019:  Installed/updated chocolatey-compatibility extensions.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of chocolatey-compatibility.extension was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\ProgramData\chocolatey\extensions\chocolatey-compatibility'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading chocolatey-core.extension 1.4.0... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-core.extension v1.4.0 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-core.extension package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019:  Installed/updated chocolatey-core extensions.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of chocolatey-core.extension was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\ProgramData\chocolatey\extensions\chocolatey-core'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading GoogleChrome 134.0.6998.36... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: GoogleChrome v134.0.6998.36 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: GoogleChrome package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading googlechrome 64 bit[0m
+[0;32m    vsphere-iso.windows_server_2019:   from 'https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: 100% - Completed download of C:\Users\Administrateur\AppData\Local\Temp\chocolatey\GoogleChrome\134.0.6998.36\googlechromestandaloneenterprise64.msi (125.61 MB).[0m
+[0;32m    vsphere-iso.windows_server_2019: Download of googlechromestandaloneenterprise64.msi (125.61 MB) completed.[0m
+[0;32m    vsphere-iso.windows_server_2019: Error - hashes do not match. Actual value was 'D7F97287F5B8C6743897A054150EFAE63A881BAF1B0DA6EA6DFB9B2BE6D529FE'.[0m
+[0;32m    vsphere-iso.windows_server_2019: ERROR: Checksum for 'C:\Users\Administrateur\AppData\Local\Temp\chocolatey\GoogleChrome\134.0.6998.36\googlechromestandaloneenterprise64.msi' did not meet '218765da793146a14092bea1cea8f73d90aa80610ce2443ca6290e44ba00e29e' for checksum type 'sha256'. Consider passing the actual checksums through with --checksum --checksum64 once you validate the checksums are appropriate. A less secure option is to pass --ignore-checksums if necessary.[0m
+[0;32m    vsphere-iso.windows_server_2019: The install of GoogleChrome was NOT successful.[0m
+[0;32m    vsphere-iso.windows_server_2019: Error while running 'C:\ProgramData\chocolatey\lib\GoogleChrome\tools\chocolateyInstall.ps1'.[0m
+[0;32m    vsphere-iso.windows_server_2019:  See log for details.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading Firefox 136.0.2... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Firefox v136.0.2 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: Firefox package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Using locale 'fr'...[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading Firefox 64 bit[0m
+[0;32m    vsphere-iso.windows_server_2019:   from 'https://download.mozilla.org/?product=firefox-136.0.2-ssl&os=win64&lang=fr'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: 100% - Completed download of C:\Users\Administrateur\AppData\Local\Temp\chocolatey\Firefox\136.0.2\Firefox Setup 136.0.2.exe (68.37 MB).[0m
+[0;32m    vsphere-iso.windows_server_2019: Download of Firefox Setup 136.0.2.exe (68.37 MB) completed.[0m
+[0;32m    vsphere-iso.windows_server_2019: Hashes match.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing Firefox...[0m
+[0;32m    vsphere-iso.windows_server_2019: Firefox has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019: WARNING: No registry key found based on  'Mozilla Firefox'[0m
+[0;32m    vsphere-iso.windows_server_2019:   Firefox may be able to be automatically uninstalled.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of Firefox was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\Program Files\Mozilla Firefox'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading 7zip.install 24.9.0... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: 7zip.install v24.9.0 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: 7zip.install package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing 64 bit version[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing 7zip.install...[0m
+[0;32m    vsphere-iso.windows_server_2019: 7zip.install has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019: 7zip installed to 'C:\Program Files\7-Zip'[0m
+[0;32m    vsphere-iso.windows_server_2019: Added C:\ProgramData\chocolatey\bin\7z.exe shim pointed to 'c:\program files\7-zip\7z.exe'.[0m
+[0;32m    vsphere-iso.windows_server_2019:   7zip.install can be automatically uninstalled.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of 7zip.install was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\Program Files\7-Zip\'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading 7zip 24.9.0... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: 7zip v24.9.0 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: 7zip package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of 7zip was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\ProgramData\chocolatey\lib\7zip'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading chocolatey-windowsupdate.extension 1.0.5... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-windowsupdate.extension v1.0.5 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-windowsupdate.extension package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019:  Installed/updated chocolatey-windowsupdate extensions.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of chocolatey-windowsupdate.extension was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\ProgramData\chocolatey\extensions\chocolatey-windowsupdate'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading KB2919442 1.0.20160915... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: KB2919442 v1.0.20160915 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: KB2919442 package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Skipping installation because this hotfix only applies to Windows 8.1 and Windows Server 2012 R2.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of KB2919442 was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software install location not explicitly set, it could be in package or[0m
+[0;32m    vsphere-iso.windows_server_2019:   default install location of installer.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading KB2919355 1.0.20160915... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: KB2919355 v1.0.20160915 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: KB2919355 package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Skipping installation because this hotfix only applies to Windows 8.1 and Windows Server 2012 R2.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of KB2919355 was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software install location not explicitly set, it could be in package or[0m
+[0;32m    vsphere-iso.windows_server_2019:   default install location of installer.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading KB2999226 1.0.20181019... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: KB2999226 v1.0.20181019 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: KB2999226 package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Skipping installation because update KB2999226 does not apply to this operating system (Microsoft Windows Server 2019 Standard Evaluation).[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of KB2999226 was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software install location not explicitly set, it could be in package or[0m
+[0;32m    vsphere-iso.windows_server_2019:   default install location of installer.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading KB3035131 1.0.3... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: KB3035131 v1.0.3 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: KB3035131 package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Skipping installation because update KB3035131 does not apply to this operating system (Microsoft Windows Server 2019 Standard Evaluation).[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of KB3035131 was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software install location not explicitly set, it could be in package or[0m
+[0;32m    vsphere-iso.windows_server_2019:   default install location of installer.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading KB3033929 1.0.5... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: KB3033929 v1.0.5 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: KB3033929 package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Skipping installation because update KB3033929 does not apply to this operating system (Microsoft Windows Server 2019 Standard Evaluation).[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of KB3033929 was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software install location not explicitly set, it could be in package or[0m
+[0;32m    vsphere-iso.windows_server_2019:   default install location of installer.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading vcredist140 14.42.34438.20250221... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: vcredist140 v14.42.34438.20250221 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: vcredist140 package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading vcredist140-x86[0m
+[0;32m    vsphere-iso.windows_server_2019:   from 'https://download.visualstudio.microsoft.com/download/pr/285b28c7-3cf9-47fb-9be8-01cf5323a8df/C4E3992F3883005881CF3937F9E33F1C7D792AC1C860EA9C52D8F120A16A7EB1/VC_redist.x86.exe'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: 100% - Completed download of C:\Users\Administrateur\AppData\Local\Temp\chocolatey\vcredist140\14.42.34438.20250221\VC_redist.x86.exe (13.3 MB).[0m
+[0;32m    vsphere-iso.windows_server_2019: Download of VC_redist.x86.exe (13.3 MB) completed.[0m
+[0;32m    vsphere-iso.windows_server_2019: Hashes match.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing vcredist140-x86...[0m
+[0;32m    vsphere-iso.windows_server_2019: vcredist140-x86 has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading vcredist140-x64 64 bit[0m
+[0;32m    vsphere-iso.windows_server_2019:   from 'https://download.visualstudio.microsoft.com/download/pr/285b28c7-3cf9-47fb-9be8-01cf5323a8df/8F9FB1B3CFE6E5092CF1225ECD6659DAB7CE50B8BF935CB79BFEDE1F3C895240/VC_redist.x64.exe'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: 100% - Completed download of C:\Users\Administrateur\AppData\Local\Temp\chocolatey\vcredist140\14.42.34438.20250221\VC_redist.x64.exe (24.45 MB).[0m
+[0;32m    vsphere-iso.windows_server_2019: Download of VC_redist.x64.exe (24.45 MB) completed.[0m
+[0;32m    vsphere-iso.windows_server_2019: Hashes match.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing vcredist140-x64...[0m
+[0;32m    vsphere-iso.windows_server_2019: vcredist140-x64 has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019:   vcredist140 may be able to be automatically uninstalled.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of vcredist140 was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software installed as 'exe', install location is likely default.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading vcredist2015 14.0.24215.20170201... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: vcredist2015 v14.0.24215.20170201 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: vcredist2015 package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of vcredist2015 was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\ProgramData\chocolatey\lib\vcredist2015'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading python311 3.11.9... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: python311 v3.11.9 [Approved] - Possibly broken[0m
+[0;32m    vsphere-iso.windows_server_2019: python311 package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing 64-bit python311...[0m
+[0;32m    vsphere-iso.windows_server_2019: python311 has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019: Added C:\ProgramData\chocolatey\bin\python3.11.exe shim pointed to 'c:\python311\python.exe'.[0m
+[0;32m    vsphere-iso.windows_server_2019: Python installed to: 'C:\Python311'[0m
+[0;32m    vsphere-iso.windows_server_2019: Restricting write permissions to Administrators[0m
+[0;32m    vsphere-iso.windows_server_2019:   python311 can be automatically uninstalled.[0m
+[0;32m    vsphere-iso.windows_server_2019: Environment Vars (like PATH) have changed. Close/reopen your shell to[0m
+[0;32m    vsphere-iso.windows_server_2019:  see the changes (or in powershell/cmd.exe just type `refreshenv`).[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of python311 was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software installed as 'exe', install location is likely default.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading filezilla 3.68.1... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: filezilla v3.68.1 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: filezilla package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing 64-bit filezilla...[0m
+[0;32m    vsphere-iso.windows_server_2019: filezilla has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019:   filezilla may be able to be automatically uninstalled.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of filezilla was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\Program Files\FileZilla FTP Client'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading notepadplusplus.install 8.7.8... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: notepadplusplus.install v8.7.8 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: notepadplusplus.install package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing 64-bit notepadplusplus.install...[0m
+[0;32m    vsphere-iso.windows_server_2019: notepadplusplus.install has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019: WARNING: No registry key found based on  'Notepad\+\+*'[0m
+[0;32m    vsphere-iso.windows_server_2019: notepadplusplus.install installed to 'C:\Program Files\Notepad++'[0m
+[0;32m    vsphere-iso.windows_server_2019: Added C:\ProgramData\chocolatey\bin\notepad++.exe shim pointed to 'c:\program files\notepad++\notepad++.exe'.[0m
+[0;32m    vsphere-iso.windows_server_2019:   notepadplusplus.install can be automatically uninstalled.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of notepadplusplus.install was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software installed as 'exe', install location is likely default.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading notepadplusplus 8.7.8... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: notepadplusplus v8.7.8 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: notepadplusplus package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of notepadplusplus was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software install location not explicitly set, it could be in package or[0m
+[0;32m    vsphere-iso.windows_server_2019:   default install location of installer.[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading winscp.install 6.3.7... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: winscp.install v6.3.7 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: winscp.install package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing 64-bit winscp...[0m
+[0;32m    vsphere-iso.windows_server_2019: winscp has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019: winscp installed to 'C:\Program Files (x86)\WinSCP'[0m
+[0;32m    vsphere-iso.windows_server_2019: Added C:\ProgramData\chocolatey\bin\winscp.exe shim pointed to 'c:\program files (x86)\winscp\winscp.exe'.[0m
+[0;32m    vsphere-iso.windows_server_2019: Added C:\ProgramData\chocolatey\bin\winscp.com.exe shim pointed to 'c:\program files (x86)\winscp\winscp.com'.[0m
+[0;32m    vsphere-iso.windows_server_2019: winscp registered as winscp[0m
+[0;32m    vsphere-iso.windows_server_2019:   winscp.install can be automatically uninstalled.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of winscp.install was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\Program Files (x86)\WinSCP\'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading winscp 6.3.7... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: winscp v6.3.7 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: winscp package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of winscp was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Deployed to 'C:\ProgramData\chocolatey\lib\winscp'[0m
+[0;32m    vsphere-iso.windows_server_2019: Downloading package from source 'https://community.chocolatey.org/api/v2/'[0m
+[0;32m    vsphere-iso.windows_server_2019: Progress: Downloading putty.install 0.83.0... 100%[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: putty.install v0.83.0 [Approved][0m
+[0;32m    vsphere-iso.windows_server_2019: putty.install package files install completed. Performing other installation steps.[0m
+[0;32m    vsphere-iso.windows_server_2019: Installing 64-bit putty.install...[0m
+[0;32m    vsphere-iso.windows_server_2019: putty.install has been installed.[0m
+[0;32m    vsphere-iso.windows_server_2019:   putty.install may be able to be automatically uninstalled.[0m
+[0;32m    vsphere-iso.windows_server_2019: Environment Vars (like PATH) have changed. Close/reopen your shell to[0m
+[0;32m    vsphere-iso.windows_server_2019:  see the changes (or in powershell/cmd.exe just type `refreshenv`).[0m
+[0;32m    vsphere-iso.windows_server_2019:  The install of putty.install was successful.[0m
+[0;32m    vsphere-iso.windows_server_2019:   Software installed as 'msi', install location is likely default.[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Chocolatey installed 20/21 packages. 1 packages failed.[0m
+[0;32m    vsphere-iso.windows_server_2019:  See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Installed:[0m
+[0;32m    vsphere-iso.windows_server_2019:  - 7zip v24.9.0[0m
+[0;32m    vsphere-iso.windows_server_2019:  - 7zip.install v24.9.0[0m
+[0;32m    vsphere-iso.windows_server_2019:  - chocolatey-compatibility.extension v1.0.0[0m
+[0;32m    vsphere-iso.windows_server_2019:  - chocolatey-core.extension v1.4.0[0m
+[0;32m    vsphere-iso.windows_server_2019:  - chocolatey-windowsupdate.extension v1.0.5[0m
+[0;32m    vsphere-iso.windows_server_2019:  - filezilla v3.68.1[0m
+[0;32m    vsphere-iso.windows_server_2019:  - Firefox v136.0.2[0m
+[0;32m    vsphere-iso.windows_server_2019:  - KB2919355 v1.0.20160915[0m
+[0;32m    vsphere-iso.windows_server_2019:  - KB2919442 v1.0.20160915[0m
+[0;32m    vsphere-iso.windows_server_2019:  - KB2999226 v1.0.20181019[0m
+[0;32m    vsphere-iso.windows_server_2019:  - KB3033929 v1.0.5[0m
+[0;32m    vsphere-iso.windows_server_2019:  - KB3035131 v1.0.3[0m
+[0;32m    vsphere-iso.windows_server_2019:  - notepadplusplus v8.7.8[0m
+[0;32m    vsphere-iso.windows_server_2019:  - notepadplusplus.install v8.7.8[0m
+[0;32m    vsphere-iso.windows_server_2019:  - putty.install v0.83.0[0m
+[0;32m    vsphere-iso.windows_server_2019:  - python311 v3.11.9[0m
+[0;32m    vsphere-iso.windows_server_2019:  - vcredist140 v14.42.34438.20250221[0m
+[0;32m    vsphere-iso.windows_server_2019:  - vcredist2015 v14.0.24215.20170201[0m
+[0;32m    vsphere-iso.windows_server_2019:  - winscp v6.3.7[0m
+[0;32m    vsphere-iso.windows_server_2019:  - winscp.install v6.3.7[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Failures[0m
+[0;32m    vsphere-iso.windows_server_2019:  - GoogleChrome (exited -1) - Error while running 'C:\ProgramData\chocolatey\lib\GoogleChrome\tools\chocolateyInstall.ps1'.[0m
+[0;32m    vsphere-iso.windows_server_2019:  See log for details.[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Enjoy using Chocolatey? Explore more amazing features to take your[0m
+[0;32m    vsphere-iso.windows_server_2019: experience to the next level at[0m
+[0;32m    vsphere-iso.windows_server_2019:  https://chocolatey.org/compare[0m
+[0;32m    vsphere-iso.windows_server_2019: Logiciels installÃ©s via Chocolatey :[0m
+[0;32m    vsphere-iso.windows_server_2019: Chocolatey v2.4.3[0m
+2025/03/19 23:33:28 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:28 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db441e-e91d-d702-eba4-d04c741e6187.ps1; &'c:/Windows/Temp/script-67db441e-6cd7-bf61-f543-cf3723560c22.ps1'; exit $LastExitCode }"' exited with code: 0
+2025/03/19 23:33:28 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:28 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:33:28 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:33:28 [INFO] 738216 bytes written for 'stdout'
+2025/03/19 23:33:28 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:33:28 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:33:28 packer-provisioner-powershell plugin: [INFO] 738216 bytes written for 'stdout'
+2025/03/19 23:33:28 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:33:28 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vsphere-iso.windows_server_2019: 7zip 24.9.0[0m
+[0;32m    vsphere-iso.windows_server_2019: 7zip.install 24.9.0[0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey 2.4.3[0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-compatibility.extension 1.0.0[0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-core.extension 1.4.0[0m
+[0;32m    vsphere-iso.windows_server_2019: chocolatey-windowsupdate.extension 1.0.5[0m
+[0;32m    vsphere-iso.windows_server_2019: filezilla 3.68.1[0m
+[0;32m    vsphere-iso.windows_server_2019: Firefox 136.0.2[0m
+[0;32m    vsphere-iso.windows_server_2019: KB2919355 1.0.20160915[0m
+[0;32m    vsphere-iso.windows_server_2019: KB2919442 1.0.20160915[0m
+[0;32m    vsphere-iso.windows_server_2019: KB2999226 1.0.20181019[0m
+[0;32m    vsphere-iso.windows_server_2019: KB3033929 1.0.5[0m
+[0;32m    vsphere-iso.windows_server_2019: KB3035131 1.0.3[0m
+[0;32m    vsphere-iso.windows_server_2019: notepadplusplus 8.7.8[0m
+2025/03/19 23:33:29 packer-provisioner-powershell plugin: c:/Windows/Temp/script-67db441e-6cd7-bf61-f543-cf3723560c22.ps1 returned with exit code 0
+2025/03/19 23:33:29 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:33:29 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:33:29 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:29 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db441e-cebb-c007-8972-c2c3f9a7853a.ps1'
+[0;32m    vsphere-iso.windows_server_2019: notepadplusplus.install 8.7.8[0m
+[0;32m    vsphere-iso.windows_server_2019: putty.install 0.83.0[0m
+[0;32m    vsphere-iso.windows_server_2019: python311 3.11.9[0m
+[0;32m    vsphere-iso.windows_server_2019: vcredist140 14.42.34438.20250221[0m
+[0;32m    vsphere-iso.windows_server_2019: vcredist2015 14.0.24215.20170201[0m
+[0;32m    vsphere-iso.windows_server_2019: winscp 6.3.7[0m
+[0;32m    vsphere-iso.windows_server_2019: winscp.install 6.3.7[0m
+[0;32m    vsphere-iso.windows_server_2019: 21 packages installed.[0m
+[0;32m    vsphere-iso.windows_server_2019: fin de l'installation de chocolatey[0m
+2025/03/19 23:33:36 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:36 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db441e-e91d-d702-eba4-d04c741e6187.ps1; &'c:/Windows/Temp/packer-cleanup-67db441e-cebb-c007-8972-c2c3f9a7853a.ps1'; exit $LastExitCode }"
+2025/03/19 23:33:39 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:39 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db441e-e91d-d702-eba4-d04c741e6187.ps1; &'c:/Windows/Temp/packer-cleanup-67db441e-cebb-c007-8972-c2c3f9a7853a.ps1'; exit $LastExitCode }"' exited with code: 0
+2025/03/19 23:33:39 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:39 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:33:39 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:33:39 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:33:39 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:33:39 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:33:39 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:33:39 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:33:39 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:33:39 [INFO] (telemetry) ending powershell
+2025/03/19 23:33:39 [INFO] (telemetry) Starting provisioner powershell
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with Powershell...[0m
+2025/03/19 23:33:39 packer-provisioner-powershell plugin: Opening /var/Packer/windows/win19/scripts/removeAutologon.ps1 for reading
+2025/03/19 23:33:39 packer-provisioner-powershell plugin: Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-67db4643-5f66-78c3-3b0e-9371c2e2432b.ps1
+2025/03/19 23:33:39 packer-provisioner-powershell plugin: [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:33:39 [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:33:39 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:39 Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-67db4643-5f66-78c3-3b0e-9371c2e2432b.ps1'
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with powershell script: /var/Packer/windows/win19/scripts/removeAutologon.ps1[0m
+2025/03/19 23:33:46 packer-provisioner-powershell plugin: [INFO] 829 bytes written for 'uploadData'
+2025/03/19 23:33:46 [INFO] 829 bytes written for 'uploadData'
+2025/03/19 23:33:46 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:46 Uploading file to 'c:/Windows/Temp/script-67db4643-7df7-0788-0237-33cbb46c0251.ps1'
+2025/03/19 23:33:53 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:53 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db4643-5f66-78c3-3b0e-9371c2e2432b.ps1; &'c:/Windows/Temp/script-67db4643-7df7-0788-0237-33cbb46c0251.ps1'; exit $LastExitCode }"
+2025/03/19 23:33:57 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:57 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db4643-5f66-78c3-3b0e-9371c2e2432b.ps1; &'c:/Windows/Temp/script-67db4643-7df7-0788-0237-33cbb46c0251.ps1'; exit $LastExitCode }"' exited with code: 0
+2025/03/19 23:33:57 [INFO] 74 bytes written for 'stdout'
+2025/03/19 23:33:57 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:33:57 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:33:57 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:33:57 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:57 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:33:57 packer-provisioner-powershell plugin: [INFO] 74 bytes written for 'stdout'
+2025/03/19 23:33:57 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:33:57 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vsphere-iso.windows_server_2019: Suppression de l'Autologon...[0m
+[0;32m    vsphere-iso.windows_server_2019: Autologon dÃ©sactivÃ© avec succÃ¨s.[0m
+2025/03/19 23:33:57 packer-provisioner-powershell plugin: c:/Windows/Temp/script-67db4643-7df7-0788-0237-33cbb46c0251.ps1 returned with exit code 0
+2025/03/19 23:33:57 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:33:57 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:33:57 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:33:57 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db4643-a67a-ca77-1dc6-d982217c5538.ps1'
+2025/03/19 23:34:04 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:34:04 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db4643-5f66-78c3-3b0e-9371c2e2432b.ps1; &'c:/Windows/Temp/packer-cleanup-67db4643-a67a-ca77-1dc6-d982217c5538.ps1'; exit $LastExitCode }"
+2025/03/19 23:34:07 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:34:07 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db4643-5f66-78c3-3b0e-9371c2e2432b.ps1; &'c:/Windows/Temp/packer-cleanup-67db4643-a67a-ca77-1dc6-d982217c5538.ps1'; exit $LastExitCode }"' exited with code: 0
+2025/03/19 23:34:07 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:34:07 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:34:07 [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:34:07 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:34:07 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:34:07 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:34:07 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stdout'
+2025/03/19 23:34:07 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:34:07 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:34:07 [INFO] (telemetry) ending powershell
+2025/03/19 23:34:07 [INFO] (telemetry) Starting provisioner file
+[1;32m==> vsphere-iso.windows_server_2019: Uploading /var/Packer/windows/win19/scripts/ipStatiqueEnthern0.ps1 => C:/Windows/Temp/set_static_ip.ps1[0m
+2025/03/19 23:34:07 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:34:07 Uploading file to 'C:/Windows/Temp/set_static_ip.ps1'
+2025/03/19 23:34:07 packer-provisioner-file plugin: [INFO] 971 bytes written for 'uploadData'
+2025/03/19 23:34:07 [INFO] 971 bytes written for 'uploadData'
+[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [======================================================================] 100.00%
+2025/03/19 23:34:15 packer-provisioner-file plugin: closing
+2025/03/19 23:34:15 closing
+2025/03/19 23:34:15 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:34:15 closing
+[1A[0;32m    vsphere-iso.windows_server_2019: ipStatiqueEnthern0.ps1[0m 971 B / 971 B [===================================================================] 100.00% 7s
+2025/03/19 23:34:15 [INFO] (telemetry) ending file
+2025/03/19 23:34:15 [INFO] (telemetry) Starting provisioner powershell
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with Powershell...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Provisioning with powershell script: /tmp/powershell-provisioner585201685[0m
+2025/03/19 23:34:15 packer-provisioner-powershell plugin: Found command: powershell.exe -ExecutionPolicy Bypass -File C:/Windows/Temp/set_static_ip.ps1 -InterfaceAlias Ethernet1 -IpAddress 172.16.2.58 -SubnetMask 255.255.255.192 -Gateway 172.16.2.62 -DNSServer 172.16.2.61
+2025/03/19 23:34:15 packer-provisioner-powershell plugin: Found command: powershell.exe -ExecutionPolicy Bypass -File C:/Windows/Temp/set_static_ip.ps1 -InterfaceAlias Ethernet0 -IpAddress 192.168.3.101 -SubnetMask 255.255.255.0 -Gateway 192.168.3.1 -DNSServer 8.8.8.8
+2025/03/19 23:34:15 packer-provisioner-powershell plugin: Opening /tmp/powershell-provisioner585201685 for reading
+2025/03/19 23:34:15 packer-provisioner-powershell plugin: Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-67db4667-8d96-f851-fb27-d9f79790cf29.ps1
+2025/03/19 23:34:15 packer-provisioner-powershell plugin: [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:34:15 [INFO] 189 bytes written for 'uploadData'
+2025/03/19 23:34:15 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:34:15 Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-67db4667-8d96-f851-fb27-d9f79790cf29.ps1'
+2025/03/19 23:34:22 packer-provisioner-powershell plugin: [INFO] 396 bytes written for 'uploadData'
+2025/03/19 23:34:22 [INFO] 396 bytes written for 'uploadData'
+2025/03/19 23:34:22 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:34:22 Uploading file to 'c:/Windows/Temp/script-67db4667-2dd8-8fec-85f0-630b6b4f02db.ps1'
+2025/03/19 23:34:30 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:34:30 [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db4667-8d96-f851-fb27-d9f79790cf29.ps1; &'c:/Windows/Temp/script-67db4667-2dd8-8fec-85f0-630b6b4f02db.ps1'; exit $LastExitCode }"
+[0;32m    vsphere-iso.windows_server_2019: Configuration interface[0m
+[0;32m    vsphere-iso.windows_server_2019: Ethernet1[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: IPAddress         : 172.16.2.58[0m
+[0;32m    vsphere-iso.windows_server_2019: InterfaceIndex    : 7[0m
+[0;32m    vsphere-iso.windows_server_2019: InterfaceAlias    : Ethernet1[0m
+[0;32m    vsphere-iso.windows_server_2019: AddressFamily     : IPv4[0m
+[0;32m    vsphere-iso.windows_server_2019: Type              : Unicast[0m
+[0;32m    vsphere-iso.windows_server_2019: PrefixLength      : 24[0m
+[0;32m    vsphere-iso.windows_server_2019: PrefixOrigin      : Manual[0m
+[0;32m    vsphere-iso.windows_server_2019: SuffixOrigin      : Manual[0m
+[0;32m    vsphere-iso.windows_server_2019: AddressState      : Tentative[0m
+[0;32m    vsphere-iso.windows_server_2019: ValidLifetime     : Infinite ([TimeSpan]::MaxValue)[0m
+[0;32m    vsphere-iso.windows_server_2019: PreferredLifetime : Infinite ([TimeSpan]::MaxValue)[0m
+[0;32m    vsphere-iso.windows_server_2019: SkipAsSource      : False[0m
+[0;32m    vsphere-iso.windows_server_2019: PolicyStore       : ActiveStore[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: IPAddress         : 172.16.2.58[0m
+[0;32m    vsphere-iso.windows_server_2019: InterfaceIndex    : 7[0m
+[0;32m    vsphere-iso.windows_server_2019: InterfaceAlias    : Ethernet1[0m
+[0;32m    vsphere-iso.windows_server_2019: AddressFamily     : IPv4[0m
+[0;32m    vsphere-iso.windows_server_2019: Type              : Unicast[0m
+[0;32m    vsphere-iso.windows_server_2019: PrefixLength      : 24[0m
+[0;32m    vsphere-iso.windows_server_2019: PrefixOrigin      : Manual[0m
+[0;32m    vsphere-iso.windows_server_2019: SuffixOrigin      : Manual[0m
+[0;32m    vsphere-iso.windows_server_2019: AddressState      : Invalid[0m
+[0;32m    vsphere-iso.windows_server_2019: ValidLifetime     : Infinite ([TimeSpan]::MaxValue)[0m
+[0;32m    vsphere-iso.windows_server_2019: PreferredLifetime : Infinite ([TimeSpan]::MaxValue)[0m
+[0;32m    vsphere-iso.windows_server_2019: SkipAsSource      : False[0m
+[0;32m    vsphere-iso.windows_server_2019: PolicyStore       : PersistentStore[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019:[0m
+[0;32m    vsphere-iso.windows_server_2019: Configuration interface[0m
+[0;32m    vsphere-iso.windows_server_2019: Ethernet0[0m
+2025/03/19 23:39:59 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:39:59 [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-67db4667-8d96-f851-fb27-d9f79790cf29.ps1; &'c:/Windows/Temp/script-67db4667-2dd8-8fec-85f0-630b6b4f02db.ps1'; exit $LastExitCode }"' exited with code: 0
+2025/03/19 23:39:59 [INFO] 920 bytes written for 'stdout'
+2025/03/19 23:39:59 [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:39:59 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:39:59 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:39:59 [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:39:59 [INFO] RPC endpoint: Communicator ended with: 0
+2025/03/19 23:39:59 packer-provisioner-powershell plugin: [INFO] 920 bytes written for 'stdout'
+2025/03/19 23:39:59 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2025/03/19 23:39:59 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2025/03/19 23:39:59 packer-provisioner-powershell plugin: c:/Windows/Temp/script-67db4667-2dd8-8fec-85f0-630b6b4f02db.ps1 returned with exit code 0
+2025/03/19 23:39:59 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:39:59 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:39:59 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:39:59 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1'
+2025/03/19 23:40:02 packer-provisioner-powershell plugin: failed to upload the remote cleanup script: "clean up script \"c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1\" failed to upload: Error uploading file to $env:TEMP\\winrmcp-9121b6e6-bcb3-41ac-734a-dc2c17f1aae1.tmp: Couldn't create shell: unknown error Post \"http://192.168.3.55:5985/wsman\": dial tcp 192.168.3.55:5985: connect: no route to host"
+2025/03/19 23:40:02 packer-provisioner-powershell plugin: Retryable error: clean up script "c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1" failed to upload: Error uploading file to $env:TEMP\winrmcp-9121b6e6-bcb3-41ac-734a-dc2c17f1aae1.tmp: Couldn't create shell: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host
+2025/03/19 23:40:12 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:40:12 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:40:12 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:40:12 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1'
+2025/03/19 23:40:15 packer-provisioner-powershell plugin: failed to upload the remote cleanup script: "clean up script \"c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1\" failed to upload: Error uploading file to $env:TEMP\\winrmcp-4f5d4a14-8026-4cac-7ce2-99bff104f9f3.tmp: Couldn't create shell: unknown error Post \"http://192.168.3.55:5985/wsman\": dial tcp 192.168.3.55:5985: connect: no route to host"
+2025/03/19 23:40:15 packer-provisioner-powershell plugin: Retryable error: clean up script "c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1" failed to upload: Error uploading file to $env:TEMP\winrmcp-4f5d4a14-8026-4cac-7ce2-99bff104f9f3.tmp: Couldn't create shell: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host
+2025/03/19 23:40:25 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:40:25 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:40:25 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:40:25 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1'
+2025/03/19 23:40:28 packer-provisioner-powershell plugin: failed to upload the remote cleanup script: "clean up script \"c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1\" failed to upload: Error uploading file to $env:TEMP\\winrmcp-e46aa796-a044-4e98-6d81-4fc554b4496e.tmp: Couldn't create shell: unknown error Post \"http://192.168.3.55:5985/wsman\": dial tcp 192.168.3.55:5985: connect: no route to host"
+2025/03/19 23:40:28 packer-provisioner-powershell plugin: Retryable error: clean up script "c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1" failed to upload: Error uploading file to $env:TEMP\winrmcp-e46aa796-a044-4e98-6d81-4fc554b4496e.tmp: Couldn't create shell: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host
+2025/03/19 23:40:38 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:40:38 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:40:38 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:40:38 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1'
+2025/03/19 23:40:41 packer-provisioner-powershell plugin: failed to upload the remote cleanup script: "clean up script \"c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1\" failed to upload: Error uploading file to $env:TEMP\\winrmcp-74496979-0fb2-418c-6529-7864dbba999c.tmp: Couldn't create shell: unknown error Post \"http://192.168.3.55:5985/wsman\": dial tcp 192.168.3.55:5985: connect: no route to host"
+2025/03/19 23:40:41 packer-provisioner-powershell plugin: Retryable error: clean up script "c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1" failed to upload: Error uploading file to $env:TEMP\winrmcp-74496979-0fb2-418c-6529-7864dbba999c.tmp: Couldn't create shell: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host
+2025/03/19 23:40:51 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:40:51 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:40:51 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:40:51 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1'
+2025/03/19 23:40:55 packer-provisioner-powershell plugin: failed to upload the remote cleanup script: "clean up script \"c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1\" failed to upload: Error uploading file to $env:TEMP\\winrmcp-7ab33ce7-2e53-484e-72d0-6cfc2a24d303.tmp: Couldn't create shell: unknown error Post \"http://192.168.3.55:5985/wsman\": dial tcp 192.168.3.55:5985: connect: no route to host"
+2025/03/19 23:40:55 packer-provisioner-powershell plugin: Retryable error: clean up script "c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1" failed to upload: Error uploading file to $env:TEMP\winrmcp-7ab33ce7-2e53-484e-72d0-6cfc2a24d303.tmp: Couldn't create shell: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host
+2025/03/19 23:41:05 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:41:05 [INFO] 511 bytes written for 'uploadData'
+2025/03/19 23:41:05 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:41:05 Uploading file to 'c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1'
+2025/03/19 23:41:08 packer-provisioner-powershell plugin: failed to upload the remote cleanup script: "clean up script \"c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1\" failed to upload: Error uploading file to $env:TEMP\\winrmcp-b3d580f3-9faa-4132-674f-396c9b2bdc1a.tmp: Couldn't create shell: unknown error Post \"http://192.168.3.55:5985/wsman\": dial tcp 192.168.3.55:5985: connect: no route to host"
+2025/03/19 23:41:08 packer-provisioner-powershell plugin: Retryable error: clean up script "c:/Windows/Temp/packer-cleanup-67db4667-fccc-528f-fe46-24cce15d5956.ps1" failed to upload: Error uploading file to $env:TEMP\winrmcp-b3d580f3-9faa-4132-674f-396c9b2bdc1a.tmp: Couldn't create shell: unknown error Post "http://192.168.3.55:5985/wsman": dial tcp 192.168.3.55:5985: connect: no route to host
+2025/03/19 23:41:08 packer-provisioner-powershell plugin: remote cleanup script failed to upload; skipping the removal of temporary files: c:/Windows/Temp/packer-ps-env-vars-67db4667-8d96-f851-fb27-d9f79790cf29.ps1,c:/Windows/Temp/script-67db4667-2dd8-8fec-85f0-630b6b4f02db.ps1;
+2025/03/19 23:41:08 [INFO] (telemetry) ending powershell
+[1;32m==> vsphere-iso.windows_server_2019: Shutting down virtual machine...[0m
+2025/03/19 23:41:08 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:41:08 Waiting max 40m0s for shutdown to complete
+[1;32m==> vsphere-iso.windows_server_2019: Deleting floppy drives...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Deleting floppy image...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Ejecting CD-ROM media...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Removing CD-ROM devices...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Creating snapshot...[0m
+[1;32m==> vsphere-iso.windows_server_2019: Clearing boot order...[0m
+2025/03/19 23:41:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:41:55 Deleting floppy disk: /tmp/packer3867762932
+[0;32m    vsphere-iso.windows_server_2019: Closing sessions ....[0m
+2025/03/19 23:41:55 packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64 plugin: 2025/03/19 23:41:55 [WARN] Failed to close REST client session. The session may already be closed: 400 Bad Request:
+[1;32mBuild 'vsphere-iso.windows_server_2019' finished after 1 hour 24 minutes.[0m
+
+2025/03/19 23:41:55 [INFO] (telemetry) ending vsphere-iso.windows_server_2019
+==> Wait completed after 1 hour 24 minutes
+==> Builds finished. The artifacts of successful builds are:
+2025/03/19 23:41:55 machine readable: vsphere-iso.windows_server_2019,artifact-count []string{"1"}
+==> Wait completed after 1 hour 24 minutes
+
+==> Builds finished. The artifacts of successful builds are:
+2025/03/19 23:41:55 machine readable: vsphere-iso.windows_server_2019,artifact []string{"0", "builder-id", "jetbrains.vsphere"}
+2025/03/19 23:41:55 machine readable: vsphere-iso.windows_server_2019,artifact []string{"0", "id", "M2L-WSRV02"}
+2025/03/19 23:41:55 machine readable: vsphere-iso.windows_server_2019,artifact []string{"0", "string", "M2L-WSRV02"}
+--> vsphere-iso.windows_server_2019: M2L-WSRV02
+2025/03/19 23:41:55 machine readable: vsphere-iso.windows_server_2019,artifact []string{"0", "files-count", "0"}
+2025/03/19 23:41:55 machine readable: vsphere-iso.windows_server_2019,artifact []string{"0", "end"}
+2025/03/19 23:41:55 [INFO] (telemetry) Finalizing.
+2025/03/19 23:41:55 waiting for all plugin processes to complete...
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 /root/.config/packer/plugins/github.com/hashicorp/vsphere/packer-plugin-vsphere_v1.4.2_x5.0_linux_amd64: plugin process exited
+2025/03/19 23:41:55 [ERR] Error decoding response stream 13: EOF
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 [ERR] Error decoding response stream 62: EOF
+2025/03/19 23:41:55 [ERR] Error decoding response stream 59: EOF
+2025/03/19 23:41:55 [ERR] Error decoding response stream 53: EOF
+2025/03/19 23:41:55 [ERR] Error decoding response stream 10: EOF
+2025/03/19 23:41:55 [ERR] Error decoding response stream 65: EOF
+2025/03/19 23:41:55 [ERR] Error decoding response stream 16: EOF
+2025/03/19 23:41:55 [ERR] Error decoding response stream 19: EOF
+2025/03/19 23:41:55 [ERR] Error decoding response stream 56: EOF
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited
+2025/03/19 23:41:55 /usr/bin/packer: plugin process exited

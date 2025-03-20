@@ -39,3 +39,5 @@ ip_network1 = {
 
 
 ps1_script_path = "C:/Windows/Temp/set_static_ip.ps1"
+
+ip_wait_timeout="50m"

@@ -31,7 +31,7 @@ variable ssh_password {
 
 variable ip_wait_timeout {
   type = string
-  default = "30m"
+  default = "15m"
 }
 
 variable "vm_name" {
