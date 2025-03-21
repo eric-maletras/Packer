@@ -7,7 +7,7 @@ vm_hostname = "m2l-lsrv05"
 
 vm_domain = "m2l.lan"
 
-ip_wait_timeout = "25m"
+ip_wait_timeout = "20m"
 
 network_name = "VM IMC"
 

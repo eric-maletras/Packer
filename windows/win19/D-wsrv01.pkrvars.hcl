@@ -1,4 +1,3 @@
-
 esxi_host = "192.168.3.13"
 
 esxi_user = "root"
