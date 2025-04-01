@@ -12,7 +12,7 @@ network_name = "VM IMC"
 network_name2 = "VM Network"
 
 
-ip_wait_timeout = "35m"
+ip_wait_timeout = "25m"
 
 
 networkcard1 = {

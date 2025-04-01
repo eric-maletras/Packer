@@ -112,7 +112,7 @@ source "vsphere-iso" "debian_12" {
     network_card = "e1000"
   }
 
-  http_directory = "./"
+  http_directory = "/var/Packer/debian"
 
   boot_command = [
     "<esc><wait>",
