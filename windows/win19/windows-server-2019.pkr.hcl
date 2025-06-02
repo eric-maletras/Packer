@@ -56,6 +56,11 @@ variable "esxi_network0" {
   type    = string
 }
 
+variable "DHCP" {
+  type = string
+  default = "no"
+}
+
 variable "ip_network0" {
   type = object( {
     interface = string
@@ -149,7 +154,8 @@ source "vsphere-iso" "windows_server_2019" {
     disk_size             = 61440  # Taille du disque en Mo (60 Go)
     disk_thin_provisioned = true  # Activation du thin provisioning
   }
-
+  
+  #configuration des cartes réseaux
   network_adapters {
     network      = var.esxi_network0
     network_card = "e1000"
@@ -215,16 +221,19 @@ build {
    }
 
    
+   #Configuration des cartes networks
+
    provisioner "file" {
     source      = "/var/Packer/windows/win19/scripts/ipStatiqueEnthern0.ps1"
     destination = var.ps1_script_path
    }
 
    provisioner "powershell" {
-    inline = [
-      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network1.interface} -IpAddress ${var.ip_network1.ip} -SubnetMask ${var.ip_network1.netmask} -Gateway ${var.ip_network1.gw} -DNSServer ${var.ip_network1.dns}",
-      "powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network0.interface} -IpAddress ${var.ip_network0.ip} -SubnetMask ${var.ip_network0.netmask} -Gateway ${var.ip_network0.gw} -DNSServer ${var.ip_network0.dns}"
-    ]
-   }    
+     inline = [
+       "if ('${var.DHCP}' -eq 'no') { powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network1.interface} -IpAddress ${var.ip_network1.ip} -SubnetMask ${var.ip_network1.netmask} -Gateway ${var.ip_network1.gw} -DNSServer ${var.ip_network1.dns} }",
+       "if ('${var.DHCP}' -eq 'no') { powershell.exe -ExecutionPolicy Bypass -File ${var.ps1_script_path} -InterfaceAlias ${var.ip_network0.interface} -IpAddress ${var.ip_network0.ip} -SubnetMask ${var.ip_network0.netmask} -Gateway ${var.ip_network0.gw} -DNSServer ${var.ip_network0.dns} }"
+     ]
+   }
+    
 
 }
